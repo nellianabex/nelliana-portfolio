@@ -122,7 +122,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-gris-sombre text-sm font-body uppercase tracking-widest border border-white/15 rounded-[8px] px-3 py-1.5 w-fit"
+            className="text-gris-sombre text-sm font-body uppercase tracking-widest"
           >
             Découvrez mon travail
           </motion.p>
