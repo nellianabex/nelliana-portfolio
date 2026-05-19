@@ -4,41 +4,40 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
-const pageLeft = `Cher journal,
+const pageLeft = `Multipotentielle spécialisée rap.
 
-Ce n'est pas que je ne savais pas. Je savais.
-Depuis mes 12 ans, je sais exactement ce que je veux faire,
-et pour qui. Ce n'est pas non plus une crise de vocation.
-J'ai une vision claire, une direction assumée,
-et une rage de créer qui n'a jamais faibli.
+Graphisme, photo, direction artistique, communication —
+je touche à tout, mais rien au hasard et rien sans structure.
 
-Mais voilà : malgré plus de 400 candidatures, la porte ne s'est pas ouverte.
-J'ai essayé. J'ai insisté. J'ai adapté mon discours, peaufiné mon portfolio,
-ajusté chaque mail. J'ai joué le jeu, en gardant la tête haute.
+La musique urbaine n'est pas mon contexte de travail.
+C'est ma matière première.
 
-Mais à un moment, j'ai dû me rendre à l'évidence : cette rentrée,
-ce ne serait pas pour moi.
+J'ai grandi avec le rap. Pas comme auditrice passive —
+comme quelqu'un qui décortique, qui observe, qui comprend
+comment une image sert un son, comment une identité visuelle
+porte une carrière, comment les mots et la photo peuvent faire
+la différence entre un artiste qu'on remarque
+et un artiste qu'on retient.
 
-Alors j'ai fait ce que je fais toujours quand on me ferme une porte :
-j'ai posé une stratégie.
+C'est de là que vient mon exigence.
+Pas d'une formation, pas d'un brief.
+D'années à regarder cet univers de près.`;
 
-J'ai décalé ma rentrée pour ne pas renoncer à mon ambition.
-Et j'ai pris cette année "en plus" comme une opportunité :
-celle d'affiner encore, de grandir autrement, de créer avec encore plus de sens.`;
+const pageRight = `Aujourd'hui je travaille sur deux axes qui se nourrissent l'un l'autre :
+la création visuelle et la direction de communication d'un côté,
+le management d'artistes de l'autre.
 
-const pageRight = `Parce que pour moi, la communication, ce n'est pas qu'un outil.
-C'est un pont. Entre les projets et les gens. Entre les idées et leur résonance.
-C'est le moyen de traduire une vision en impact, une identité en émotion,
-une mission en mouvement.
+Les deux demandent la même chose :
+une vision claire, une exécution rigoureuse,
+et la capacité à tenir plusieurs fils en même temps
+sans en lâcher aucun.
 
-Diplômée d'un Bachelor Concepteur Designer UI, aujourd'hui,
-je cherche une alternance en communication pour septembre 2025.
+Multipotentielle, ça ne veut pas dire dispersée.
+Ça veut dire que je vois les connexions là où d'autres voient des silos.
 
-Pas pour "remplir une ligne sur mon CV".
-Mais pour mettre ma sensibilité, mon exigence et mon feu créatif
-au service d'une structure qui croit, elle aussi, que l'image peut porter du poids,
-peut porter du sens, que les mots peuvent porter du poids,
-et que la com' est bien plus qu'une surface.
+Et dans le rap, où tout est lié —
+le son, l'image, la communication, le business —
+c'est exactement ce qu'il faut.
 
 — Nel`;
 

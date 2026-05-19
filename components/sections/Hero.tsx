@@ -122,7 +122,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-gris-sombre text-sm font-body uppercase tracking-widest"
+            className="text-gris-sombre text-sm font-body uppercase tracking-widest border border-white/15 rounded-[8px] px-3 py-1.5 w-fit"
           >
             Découvrez mon travail
           </motion.p>
@@ -162,9 +162,9 @@ export default function Hero() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 1.1 }}
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 border border-fluo/40 rounded-[8px] px-3 py-1.5 w-fit"
           >
-            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse flex-shrink-0" />
             <span className="text-sm font-body text-gris-sombre">Disponible pour de nouveaux projets</span>
           </motion.div>
 
@@ -191,7 +191,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 1.7 }}
-            className="inline-flex items-center gap-3 mt-4 px-8 py-3 bg-fluo text-noir font-body font-semibold text-sm rounded-full hover:scale-105 hover:shadow-[0_0_30px_rgba(212,255,0,0.3)] transition-all duration-300 w-fit"
+            className="inline-flex items-center gap-3 mt-4 px-8 py-3 bg-fluo text-noir font-body font-semibold text-sm rounded-[8px] hover:scale-105 hover:shadow-[0_0_30px_rgba(212,255,0,0.3)] transition-all duration-300 w-fit"
             aria-label="Voir mes projets"
           >
             Voir mes projets
