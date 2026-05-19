@@ -3,6 +3,45 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
+function SunflowerCursor({ size, opacity }: { size: number; opacity: number }) {
+  const petalCount = 12;
+  const cx = size / 2;
+  const cy = size / 2;
+  const petalLen = size * 0.38;
+  const petalW = size * 0.13;
+  const coreR = size * 0.18;
+
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox={`0 0 ${size} ${size}`}
+      fill="none"
+      style={{ opacity, display: "block" }}
+    >
+      {Array.from({ length: petalCount }).map((_, i) => {
+        const angle = (i * 360) / petalCount;
+        const rad = (angle * Math.PI) / 180;
+        const px = Math.round((cx + Math.cos(rad) * (coreR + petalLen / 2)) * 1000) / 1000;
+        const py = Math.round((cy + Math.sin(rad) * (coreR + petalLen / 2)) * 1000) / 1000;
+        return (
+          <ellipse
+            key={i}
+            cx={px}
+            cy={py}
+            rx={petalW / 2}
+            ry={petalLen / 2}
+            stroke="#D4FF00"
+            strokeWidth={1.2}
+            transform={`rotate(${angle + 90}, ${px}, ${py})`}
+          />
+        );
+      })}
+      <circle cx={cx} cy={cy} r={coreR} stroke="#D4FF00" strokeWidth={1.2} />
+    </svg>
+  );
+}
+
 export default function CustomCursor() {
   const cursorRef = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
   const [pos, setPos] = useState({ x: -100, y: -100 });
@@ -55,26 +94,19 @@ export default function CustomCursor() {
     };
   }, [visible]);
 
+  const size = hovered ? 52 : 22;
+
   return (
     <motion.div
-      className="fixed top-0 left-0 z-[99999] pointer-events-none mix-blend-difference"
-      style={{ x: pos.x - (hovered ? 20 : 6), y: pos.y - (hovered ? 20 : 6) }}
+      className="fixed top-0 left-0 z-[99999] pointer-events-none"
+      style={{ x: pos.x - size / 2, y: pos.y - size / 2 }}
       aria-hidden="true"
     >
       <motion.div
-        animate={{
-          width: hovered ? 40 : 12,
-          height: hovered ? 40 : 12,
-          opacity: visible ? 1 : 0,
-        }}
-        transition={{ duration: 0.2, ease: "easeOut" }}
-        className="rounded-full bg-fluo flex items-center justify-center overflow-hidden"
+        animate={{ width: size, height: size, rotate: hovered ? 30 : 0 }}
+        transition={{ duration: 0.25, ease: "easeOut" }}
       >
-        {hovered && (
-          <span className="text-[6px] font-display text-noir leading-none tracking-wider">
-            VOIR
-          </span>
-        )}
+        <SunflowerCursor size={size} opacity={visible ? 1 : 0} />
       </motion.div>
     </motion.div>
   );
