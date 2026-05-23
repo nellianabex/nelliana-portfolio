@@ -5,7 +5,7 @@ import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
 import Ticker from "@/components/ui/Ticker";
 
-const pills = ["Curiosité", "Rigueur", "Créativité", "Autonomie", "Proactivité", "Esprit d'équipe"];
+const pills = ["Direction artistique", "Branding", "Photographie", "Communication", "Rap & culture urbaine"];
 
 const NELLIANA = "NELLIANA".split("");
 
@@ -172,7 +172,7 @@ export default function Hero() {
             className="flex items-center gap-2 border border-fluo/40 rounded-[8px] px-3 py-1.5 w-fit"
           >
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse flex-shrink-0" />
-            <span className="text-sm font-body text-gris-sombre">Disponible pour de nouveaux projets</span>
+            <span className="text-sm font-body text-gris-sombre">Disponible pour vos projets créatifs</span>
           </motion.div>
 
           {/* Soft skills pills */}
