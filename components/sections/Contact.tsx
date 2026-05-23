@@ -274,7 +274,7 @@ function BriefForm({ onClose }: { onClose: () => void }) {
       form.cible || "Non précisée",
       ``,
       `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`,
-      `  DIRECTION ARTISTIQUE — AMBIANCE`,
+      `  DIRECTION ARTISTIQUE / AMBIANCE`,
       `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`,
       form.ambiance,
       ``,
@@ -495,13 +495,13 @@ function BriefForm({ onClose }: { onClose: () => void }) {
             </div>
 
             <div className="flex flex-col gap-2">
-              <FieldLabel>Direction artistique — l&apos;ambiance</FieldLabel>
+              <FieldLabel>Direction artistique : l&apos;ambiance</FieldLabel>
               <FieldHint>3 mots ou adjectifs. Ce que tu veux que les gens ressentent.</FieldHint>
               <input
                 type="text"
                 value={form.ambiance}
                 onChange={(e) => set("ambiance", e.target.value)}
-                placeholder="Ex : sobre, brut, épuré — authentique avant aesthetic"
+                placeholder="Ex : sobre, brut, épuré, authentique avant aesthetic"
                 className={inputClass(errors.ambiance)}
               />
               {errors.ambiance && <span className="text-[11px] text-red-400 font-body">Obligatoire</span>}
@@ -521,7 +521,7 @@ function BriefForm({ onClose }: { onClose: () => void }) {
 
             <div className="flex flex-col gap-2">
               <FieldLabel optional>Ce qu&apos;il faut absolument éviter</FieldLabel>
-              <FieldHint>Styles, couleurs, directions — tout ce qui ne te ressemble pas.</FieldHint>
+              <FieldHint>Styles, couleurs, directions : tout ce qui ne te ressemble pas.</FieldHint>
               <textarea
                 value={form.aEviter}
                 onChange={(e) => set("aEviter", e.target.value)}

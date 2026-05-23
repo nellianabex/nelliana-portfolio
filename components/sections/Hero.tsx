@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
+import Image from "next/image";
 import Ticker from "@/components/ui/Ticker";
 
 const pills = ["Curiosité", "Rigueur", "Créativité", "Autonomie", "Proactivité", "Esprit d'équipe"];
@@ -72,8 +73,14 @@ function AccreditationCard() {
 
         {/* Photo placeholder + name */}
         <div className="mt-auto flex items-end gap-2">
-          <div className="w-12 h-12 rounded-full bg-noir/20 flex items-center justify-center overflow-hidden flex-shrink-0">
-            <span className="text-noir/40 text-[8px] font-body">PHOTO</span>
+          <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 relative">
+            <Image
+              src="/nelliana-portrait.png"
+              alt="Nelliana BEX"
+              fill
+              className="object-cover object-center grayscale"
+              sizes="48px"
+            />
           </div>
           <div>
             <p className="font-body font-bold text-noir text-sm leading-tight">Nelliana BEX</p>

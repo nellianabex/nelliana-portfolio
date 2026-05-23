@@ -68,7 +68,7 @@ function PhotoCard({ photo, index }: { photo: Photo; index: number }) {
         className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-noir/90 to-transparent"
       >
         <p className="font-body font-semibold text-blanc-casse text-sm">{photo.artiste}</p>
-        <p className="font-body text-gris-sombre text-xs">{photo.event} — {photo.ville}</p>
+        <p className="font-body text-gris-sombre text-xs">{photo.event} · {photo.ville}</p>
       </motion.div>
     </motion.div>
   );

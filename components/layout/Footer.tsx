@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <span className="font-display text-xl text-blanc-casse tracking-wide">NELLIANA BEX</span>
         <p className="text-gris-sombre text-sm font-body">
-          © {new Date().getFullYear()} Nelliana BEX — Tous droits réservés
+          © {new Date().getFullYear()} Nelliana BEX · Tous droits réservés
         </p>
         <div className="flex items-center gap-6">
           <a
