@@ -21,14 +21,22 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
     background-color: var(--noir);
     color: var(--blanc-casse);
     font-family: var(--font-inter);
-    cursor: none;
     overflow-x: hidden;
+    min-width: 320px;
+  }
+
+  /* Hide native cursor only on devices that support hover (desktop) */
+  @media (hover: hover) and (pointer: fine) {
+    body, a, button {
+      cursor: none;
+    }
   }
 
   /* Film grain overlay */

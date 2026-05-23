@@ -47,8 +47,18 @@ export default function CustomCursor() {
   const [pos, setPos] = useState({ x: -100, y: -100 });
   const [hovered, setHovered] = useState(false);
   const [visible, setVisible] = useState(false);
+  const [isTouch, setIsTouch] = useState(false);
   const rafRef = useRef<number>(0);
   const targetRef = useRef({ x: -100, y: -100 });
+
+  useEffect(() => {
+    // Hide on touch/mobile devices
+    const mq = window.matchMedia("(hover: none) and (pointer: coarse)");
+    setIsTouch(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsTouch(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
 
   useEffect(() => {
     const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
@@ -95,6 +105,8 @@ export default function CustomCursor() {
   }, [visible]);
 
   const size = hovered ? 52 : 22;
+
+  if (isTouch) return null;
 
   return (
     <motion.div

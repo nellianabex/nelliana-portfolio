@@ -73,7 +73,7 @@ export default function RootLayout({
         <SmoothScroll>
           <CustomCursor />
           {/* Banner management */}
-          <div className="w-full bg-fluo text-noir text-center py-2 px-4 font-body text-xs font-semibold tracking-wide z-[60] relative">
+          <div className="w-full bg-fluo text-noir text-center py-2 px-4 font-body text-[10px] sm:text-xs font-semibold tracking-wide z-[60] relative leading-snug">
             Management d&apos;artistes : complet pour le moment. Autres collaborations bienvenues.
           </div>
           <Nav />

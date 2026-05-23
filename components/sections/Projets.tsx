@@ -105,7 +105,7 @@ export default function Projets() {
   return (
     <section
       id="projets"
-      className="py-24 md:py-36 bg-noir overflow-hidden"
+      className="py-16 md:py-36 bg-noir overflow-hidden"
       aria-label="Projets de Nelliana BEX"
     >
       {/* Ticker */}
@@ -116,9 +116,9 @@ export default function Projets() {
         separator="✦"
       />
 
-      <div className="px-6 md:px-12">
+      <div className="px-5 md:px-12">
         <AnimatedSection className="mb-10">
-          <h2 className="font-display text-5xl md:text-7xl text-blanc-casse tracking-wide">
+          <h2 className="font-display text-4xl md:text-7xl text-blanc-casse tracking-wide">
             MES CRÉATIONS
           </h2>
         </AnimatedSection>

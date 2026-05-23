@@ -32,16 +32,16 @@ function GlobeIcon() {
 function AccreditationCard() {
   return (
     <motion.div
-      initial={{ y: -120, opacity: 0, rotate: -3 }}
+      initial={{ y: -80, opacity: 0, rotate: -3 }}
       animate={{ y: 0, opacity: 1, rotate: -3 }}
       transition={{ type: "spring", stiffness: 180, damping: 18, delay: 1.2 }}
-      className="relative w-[200px] md:w-[240px]"
+      className="relative w-[170px] sm:w-[200px] md:w-[240px]"
       style={{ willChange: "transform" }}
       aria-label="Carte accréditation Nelliana BEX"
     >
       <div
-        className="bg-fluo rounded-2xl p-5 shadow-[0_20px_60px_rgba(212,255,0,0.25)] flex flex-col gap-3"
-        style={{ minHeight: 360 }}
+        className="bg-fluo rounded-2xl p-4 md:p-5 shadow-[0_20px_60px_rgba(212,255,0,0.25)] flex flex-col gap-2 md:gap-3"
+        style={{ minHeight: 300 }}
       >
         {/* Top row */}
         <div className="flex items-center justify-between">
@@ -59,14 +59,14 @@ function AccreditationCard() {
         </div>
 
         {/* Status */}
-        <div className="mt-2">
-          <p className="font-display text-5xl leading-none text-noir tracking-wide">
+        <div className="mt-1 md:mt-2">
+          <p className="font-display text-4xl md:text-5xl leading-none text-noir tracking-wide">
             DISPONIBLE
           </p>
-          <p className="font-display text-3xl leading-none text-noir/60 tracking-wide">
+          <p className="font-display text-2xl md:text-3xl leading-none text-noir/60 tracking-wide">
             POUR VOUS
           </p>
-          <p className="font-display text-3xl leading-none text-noir/60 tracking-wide">
+          <p className="font-display text-2xl md:text-3xl leading-none text-noir/60 tracking-wide">
             ACCOMPAGNER
           </p>
         </div>
@@ -122,7 +122,7 @@ export default function Hero() {
       </div>
 
       {/* Main content */}
-      <div className="flex-1 max-w-[1440px] mx-auto w-full px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-12 py-16 md:py-24">
+      <div className="flex-1 max-w-[1440px] mx-auto w-full px-5 md:px-12 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 py-10 md:py-24">
         {/* Left: text */}
         <div className="flex-1 flex flex-col gap-8">
           <motion.p
@@ -143,7 +143,7 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.5 + i * 0.05, ease: "easeOut" }}
-                  className="font-display text-[clamp(4rem,10vw,9rem)] text-blanc-casse"
+                  className="font-display text-[clamp(2.2rem,10vw,9rem)] text-blanc-casse"
                   style={{ willChange: "transform, opacity" }}
                 >
                   {letter}
@@ -156,7 +156,7 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 1.0, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="font-display text-[clamp(4rem,10vw,9rem)] text-fluo leading-none"
+              className="font-display text-[clamp(2.2rem,10vw,9rem)] text-fluo leading-none"
               style={{ willChange: "transform, opacity" }}
               aria-label="BEX"
             >
@@ -207,7 +207,7 @@ export default function Hero() {
         </div>
 
         {/* Right: accreditation card */}
-        <div className="flex-shrink-0 flex items-center justify-center md:justify-end">
+        <div className="flex-shrink-0 flex items-center justify-center md:justify-end self-center md:self-auto">
           <AccreditationCard />
         </div>
       </div>

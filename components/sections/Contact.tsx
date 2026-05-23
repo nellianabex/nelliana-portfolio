@@ -655,7 +655,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-24 md:py-36 px-6 md:px-12 bg-surface"
+      className="py-16 md:py-36 px-5 md:px-12 bg-surface"
       aria-label="Contact — Nelliana BEX"
     >
       <div className="max-w-[1440px] mx-auto">
@@ -667,7 +667,7 @@ export default function Contact() {
           </h2>
         </AnimatedSection>
 
-        <AnimatedSection delay={0.15} className="mt-16 grid md:grid-cols-2 gap-16 items-start">
+        <AnimatedSection delay={0.15} className="mt-10 md:mt-16 grid md:grid-cols-2 gap-10 md:gap-16 items-start">
           {/* Left — form ou CTA */}
           <div className="flex flex-col gap-6">
             <AnimatePresence mode="wait">

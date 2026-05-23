@@ -114,7 +114,7 @@ export default function Photographie({ photos = placeholderPhotos }: Photographi
   return (
     <section
       id="photographie"
-      className="py-24 md:py-36 bg-surface overflow-hidden"
+      className="py-16 md:py-36 bg-surface overflow-hidden"
       aria-label="Galerie photographique de Nelliana BEX"
     >
       {/* Ticker */}
@@ -125,10 +125,10 @@ export default function Photographie({ photos = placeholderPhotos }: Photographi
         separator="✦"
       />
 
-      <div className="px-6 md:px-12 mb-10">
+      <div className="px-5 md:px-12 mb-10">
         <AnimatedSection>
           <div className="flex items-end justify-between">
-            <h2 className="font-display text-5xl md:text-7xl text-blanc-casse tracking-wide">
+            <h2 className="font-display text-4xl md:text-7xl text-blanc-casse tracking-wide">
               PHOTOGRAPHIE
             </h2>
             <a
@@ -145,7 +145,7 @@ export default function Photographie({ photos = placeholderPhotos }: Photographi
       {/* Horizontal scroll gallery */}
       <div
         ref={galleryRef}
-        className="flex gap-4 px-6 md:px-12 overflow-x-auto scroll-smooth pb-4 hide-scrollbar"
+        className="flex gap-4 px-5 md:px-12 overflow-x-auto scroll-smooth pb-4 hide-scrollbar"
         style={{
           cursor: "grab",
           WebkitOverflowScrolling: "touch",
@@ -166,7 +166,7 @@ export default function Photographie({ photos = placeholderPhotos }: Photographi
       </div>
 
       {/* Mobile CTA */}
-      <div className="mt-8 px-6 md:hidden">
+      <div className="mt-8 px-5 md:hidden">
         <a
           href="#contact"
           className="inline-flex items-center gap-2 px-6 py-2.5 bg-fluo text-noir font-body font-semibold text-sm rounded-full"

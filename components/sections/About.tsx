@@ -35,13 +35,13 @@ export default function About() {
     <section
       id="about"
       ref={sectionRef}
-      className="py-24 md:py-36 px-6 md:px-12 bg-noir relative overflow-hidden"
+      className="py-16 md:py-36 px-5 md:px-12 bg-noir relative overflow-hidden"
       aria-label="À propos de Nelliana BEX"
     >
       <div className="max-w-[1440px] mx-auto">
 
         <AnimatedSection>
-          <h2 className="font-display text-5xl md:text-7xl text-blanc-casse mb-16 tracking-wide">
+          <h2 className="font-display text-4xl md:text-7xl text-blanc-casse mb-10 md:mb-16 tracking-wide">
             À PROPOS
           </h2>
         </AnimatedSection>
@@ -51,7 +51,7 @@ export default function About() {
           <div className="grid md:grid-cols-[5fr_7fr] border border-white/8 overflow-hidden">
 
             {/* ── Photo column ── */}
-            <div ref={photoRef} className="relative overflow-hidden min-h-[420px] md:min-h-0">
+            <div ref={photoRef} className="relative overflow-hidden min-h-[320px] md:min-h-0">
               <motion.div
                 style={{ y: photoY, willChange: "transform" }}
                 className="absolute inset-0 scale-[1.06]"
@@ -80,7 +80,7 @@ export default function About() {
             </div>
 
             {/* ── Text column ── */}
-            <div className="flex flex-col p-8 md:p-12 lg:p-16">
+            <div className="flex flex-col p-6 md:p-12 lg:p-16">
 
               {/* Tag */}
               <p className="text-[10px] font-body uppercase tracking-[0.25em] text-fluo mb-10">
