@@ -624,7 +624,7 @@ function BriefForm({ onClose }: { onClose: () => void }) {
 }
 
 // Email assemblé côté client uniquement — jamais dans le HTML statique
-const getEmail = () => ["nelliana.bex", "gmail.com"].join("@");
+const getEmail = () => ["contact", "nellianabex.fr"].join("@");
 
 export default function Contact() {
   const [showForm, setShowForm] = useState(false);
