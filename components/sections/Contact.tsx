@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
@@ -201,7 +201,6 @@ function BriefForm({ onClose }: { onClose: () => void }) {
   const [step, setStep] = useState(1);
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, boolean>>>({});
   const [sent, setSent] = useState(false);
-  const email = "nelliana.bex@gmail.com";
 
   const set = (key: keyof FormData, val: string | string[]) => {
     setForm((f) => ({ ...f, [key]: val }));
@@ -309,7 +308,7 @@ function BriefForm({ onClose }: { onClose: () => void }) {
       decouverte.find((d) => d.value === form.decouverte)?.label || "Non précisé",
     ].join("\n");
 
-    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:${getEmail()}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSent(true);
   };
 
@@ -624,13 +623,18 @@ function BriefForm({ onClose }: { onClose: () => void }) {
   );
 }
 
+// Email assemblé côté client uniquement — jamais dans le HTML statique
+const getEmail = () => ["nelliana.bex", "gmail.com"].join("@");
+
 export default function Contact() {
   const [showForm, setShowForm] = useState(false);
   const [copied, setCopied] = useState(false);
-  const email = "nelliana.bex@gmail.com";
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => { setMounted(true); }, []);
 
   const handleCopyEmail = async () => {
-    await navigator.clipboard.writeText(email);
+    await navigator.clipboard.writeText(getEmail());
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -673,36 +677,29 @@ export default function Contact() {
                   transition={{ duration: 0.3 }}
                   className="flex flex-col gap-6"
                 >
-                  <div>
-                    <a
-                      href={`mailto:${email}`}
-                      className="font-body text-xl md:text-2xl text-blanc-casse hover:text-fluo transition-colors duration-200 break-all"
+                  {mounted && (
+                    <button
+                      onClick={handleCopyEmail}
+                      className="inline-flex items-center gap-2 w-fit px-5 py-2.5 border border-white/20 rounded-[8px] text-sm font-body text-blanc-casse/70 hover:border-fluo hover:text-fluo transition-all duration-200"
                     >
-                      {email}
-                    </a>
-                  </div>
-
-                  <button
-                    onClick={handleCopyEmail}
-                    className="inline-flex items-center gap-2 w-fit px-5 py-2.5 border border-white/20 rounded-[8px] text-sm font-body text-blanc-casse/70 hover:border-fluo hover:text-fluo transition-all duration-200"
-                  >
-                    {copied ? (
-                      <>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <polyline points="20 6 9 17 4 12" />
-                        </svg>
-                        Copié !
-                      </>
-                    ) : (
-                      <>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <rect x="9" y="9" width="13" height="13" rx="2" />
-                          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                        </svg>
-                        Copier l&apos;email
-                      </>
-                    )}
-                  </button>
+                      {copied ? (
+                        <>
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <polyline points="20 6 9 17 4 12" />
+                          </svg>
+                          Copié !
+                        </>
+                      ) : (
+                        <>
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2" />
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                          </svg>
+                          Copier l&apos;email
+                        </>
+                      )}
+                    </button>
+                  )}
 
                   <motion.button
                     onClick={() => setShowForm(true)}
