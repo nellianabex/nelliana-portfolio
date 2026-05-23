@@ -119,9 +119,6 @@ export default function About() {
               <div className="mt-10 pt-8 border-t border-white/8 flex items-center gap-4">
                 <span className="font-handwritten text-2xl text-fluo">Nel</span>
                 <div className="flex-1 h-px bg-fluo/20" />
-                <span className="text-[10px] font-body uppercase tracking-widest text-gris-sombre">
-                  Paris
-                </span>
               </div>
             </div>
 

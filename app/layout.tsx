@@ -72,6 +72,10 @@ export default function RootLayout({
       <body className="antialiased bg-noir text-blanc-casse">
         <SmoothScroll>
           <CustomCursor />
+          {/* Banner management */}
+          <div className="w-full bg-fluo text-noir text-center py-2 px-4 font-body text-xs font-semibold tracking-wide z-[60] relative">
+            Management d&apos;artistes : complet pour le moment. Autres collaborations bienvenues.
+          </div>
           <Nav />
           <main>{children}</main>
           <Footer />
