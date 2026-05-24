@@ -4,46 +4,66 @@ export default defineType({
   name: "siteSettings",
   title: "Paramètres du site",
   type: "document",
+  groups: [
+    { name: "general", title: "Général" },
+    { name: "about", title: "Section À propos" },
+    { name: "contact", title: "Contact & réseaux" },
+  ],
   fields: [
+    // ── Général ──
     defineField({
       name: "disponible",
       title: "Disponible pour de nouveaux projets ?",
       type: "boolean",
       initialValue: true,
-      description: "Affecte le badge vert sur le Hero",
+      description: "Affiche / masque le badge vert dans le Hero",
+      group: "general",
     }),
     defineField({
-      name: "aboutTexteGauche",
-      title: "Texte About — Page gauche du carnet",
-      type: "text",
-      rows: 12,
-    }),
-    defineField({
-      name: "aboutTexteDroite",
-      title: "Texte About — Page droite du carnet",
-      type: "text",
-      rows: 12,
-    }),
-    defineField({
-      name: "email",
-      title: "Email de contact",
+      name: "bandeauManagement",
+      title: "Texte du bandeau en haut de page",
       type: "string",
-      validation: (Rule) => Rule.email(),
+      initialValue: "Management d'artistes : complet pour le moment. Autres collaborations bienvenues.",
+      description: "Le bandeau fluo tout en haut du site",
+      group: "general",
     }),
+
+    // ── About ──
+    defineField({
+      name: "aboutParagraphesGauche",
+      title: "Textes colonne gauche (About)",
+      type: "array",
+      of: [{ type: "text", rows: 3 }],
+      description: "Chaque entrée = un paragraphe dans la colonne gauche",
+      group: "about",
+    }),
+    defineField({
+      name: "aboutParagraphesDroite",
+      title: "Textes colonne droite (About)",
+      type: "array",
+      of: [{ type: "text", rows: 3 }],
+      description: "Chaque entrée = un paragraphe dans la colonne droite",
+      group: "about",
+    }),
+
+    // ── Contact ──
     defineField({
       name: "instagram",
       title: "URL Instagram",
       type: "url",
+      group: "contact",
     }),
     defineField({
       name: "linkedin",
       title: "URL LinkedIn",
       type: "url",
+      group: "contact",
     }),
     defineField({
       name: "behance",
       title: "URL Behance",
       type: "url",
+      group: "contact",
     }),
   ],
   preview: {
