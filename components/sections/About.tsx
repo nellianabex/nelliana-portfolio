@@ -6,7 +6,6 @@ import Image from "next/image";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
 const paragraphsLeft = [
-  "Multipotentielle spécialisée rap.",
   "Graphisme, photo, direction artistique, communication. Je touche à tout, mais rien au hasard et rien sans structure.",
   "La musique urbaine n'est pas mon contexte de travail. C'est ma matière première.",
   "J'ai grandi avec le rap. Pas comme auditrice passive : comme quelqu'un qui décortique, qui observe, qui comprend comment une image sert un son, comment une identité visuelle porte une carrière, comment les mots et la photo peuvent faire la différence entre un artiste qu'on remarque et un artiste qu'on retient.",
@@ -16,7 +15,7 @@ const paragraphsLeft = [
 const paragraphsRight = [
   "Aujourd'hui je travaille sur deux axes qui se nourrissent l'un l'autre : la création visuelle et la direction de communication d'un côté, le management d'artistes de l'autre.",
   "Les deux demandent la même chose : une vision claire, une exécution rigoureuse, et la capacité à tenir plusieurs fils en même temps sans en lâcher aucun.",
-  "Multipotentielle, ça ne veut pas dire dispersée. Ça veut dire que je vois les connexions là où d'autres voient des silos.",
+  "Toucher à tout, ça ne veut pas dire manquer de focus. Ça veut dire voir les connexions là où d'autres voient des silos.",
   "Et dans le rap, où tout est lié (le son, l'image, la communication, le business), c'est exactement ce qu'il faut.",
 ];
 
