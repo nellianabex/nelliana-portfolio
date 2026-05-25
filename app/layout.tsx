@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Inter, Caveat } from "next/font/google";
+import { Bebas_Neue, Inter, Caveat, DM_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/layout/Nav";
 import Footer from "@/components/layout/Footer";
@@ -22,6 +22,14 @@ const inter = Inter({
 const caveat = Caveat({
   subsets: ["latin"],
   variable: "--font-caveat",
+  display: "swap",
+});
+
+const dmMono = DM_Mono({
+  weight: ["300", "400"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  variable: "--font-dm-mono",
   display: "swap",
 });
 
@@ -68,7 +76,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${bebasNeue.variable} ${inter.variable} ${caveat.variable}`}>
+    <html lang="fr" className={`${bebasNeue.variable} ${inter.variable} ${caveat.variable} ${dmMono.variable}`}>
       <body className="antialiased bg-noir text-blanc-casse">
         <SmoothScroll>
           <CustomCursor />

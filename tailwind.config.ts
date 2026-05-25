@@ -19,6 +19,7 @@ const config: Config = {
         display: ["var(--font-bebas)", "Impact", "sans-serif"],
         body: ["var(--font-inter)", "system-ui", "sans-serif"],
         handwritten: ["var(--font-caveat)", "cursive"],
+        mono: ["var(--font-dm-mono)", "monospace"],
       },
       screens: {
         xs: "375px",
