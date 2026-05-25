@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 import Ticker from "@/components/ui/Ticker";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import { projects, categories, type Project, type Category } from "@/lib/projects";
+import { categories, type Project, type Category } from "@/lib/projects";
 
 function TicketCard({ project, index }: { project: Project; index: number }) {
   const rotation = useMemo(() => (Math.random() - 0.5) * 4, []);
@@ -94,7 +94,11 @@ function TicketCard({ project, index }: { project: Project; index: number }) {
   );
 }
 
-export default function Projets() {
+interface ProjetsProps {
+  projects: Project[];
+}
+
+export default function Projets({ projects }: ProjetsProps) {
   const [activeCategory, setActiveCategory] = useState<Category>("Tout");
 
   const filtered = useMemo(() => {
