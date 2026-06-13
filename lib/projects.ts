@@ -6,7 +6,7 @@ export interface ProcessBlock {
 export interface Project {
   slug: string;
   titre: string;
-  titreOutline?: string; // dernier mot en outline (style chrome)
+  titreOutline?: string;
   categorie: "Branding" | "Direction artistique" | "Infographie" | "Webdesign" | "Communication";
   sous_titre: string;
   description?: string;
@@ -14,7 +14,6 @@ export interface Project {
   lien_externe: string | null;
   images?: string[];
   featured?: boolean;
-  // Champs page détail
   client?: string;
   annee?: string;
   role?: string;
@@ -27,82 +26,82 @@ export const projects: Project[] = [
     slug: "plk-2069",
     titre: "PLK",
     titreOutline: "2069'",
-    categorie: "Branding",
-    sous_titre: "Concept cover & merch",
-    couleur_ticket: "#D44B4B",
+    categorie: "Direction artistique",
+    sous_titre: "Concept cover · Direction artistique",
+    couleur_ticket: "#1a1a1a",
     lien_externe: "https://www.behance.net/nellianabex",
     description:
-      "Concept complet de direction artistique pour l'album 2069' de PLK — cover, merch, déclinaisons visuelles.",
+      "Concept de direction artistique pour l'album 2069' de PLK. Palette désaturée, esthétique futuriste, système visuel déclinable sur tous les supports — cover, singles, merch.",
     featured: true,
-    client: "PLK (concept personnel)",
+    client: "PLK — concept personnel",
     annee: "2024",
     role: "Direction artistique",
     process: [
       {
         titre: "CONCEPT",
         texte:
-          "Point de départ : l'univers sonore de PLK, entre introspection et futurisme. Palette désaturée, typographie condensée, références visuelles SF des années 70. Tout part d'une idée simple : un artiste qui regarde 2069 depuis 2024.",
+          "L'album parle de projection dans le futur depuis un présent tendu. Point de départ visuel : les codes SF des années 70, désaturés, appliqués à un univers trap contemporain. Chaque choix graphique sert ce paradoxe temporel — textures argentiques, typographies condensées, palette froide.",
       },
       {
-        titre: "EXÉCUTION",
+        titre: "SYSTÈME",
         texte:
-          "Déclinaison systématique sur les formats clés : cover principale, singles, merch capsule, habillages réseaux. Chaque élément répond à une logique de système, pas de pièces isolées.",
+          "Un concept d'album, c'est pas une cover isolée. C'est un langage. Décliné sur les formats singles, les habillages réseaux, les gabarits stories, le merch capsule. Tout répond à une même grille, une même logique de teintes et de poids typographique.",
       },
     ],
-    outils: ["Photoshop", "Illustrator", "After Effects", "Figma"],
+    outils: ["Photoshop", "Illustrator", "After Effects"],
   },
   {
     slug: "nes-ca-va-aller",
     titre: "NES",
     titreOutline: "Ça Va Aller",
-    categorie: "Branding",
-    sous_titre: "Concept cover single",
-    couleur_ticket: "#4B8DD4",
+    categorie: "Direction artistique",
+    sous_titre: "Concept cover single · DA",
+    couleur_ticket: "#0d1f2d",
     lien_externe: "https://www.behance.net/nellianabex",
     description:
-      "Concept de cover single pour NES — direction artistique, typographie, palette de couleurs.",
+      "Direction artistique pour le single Ça Va Aller de NES. Traitement photo entre grain argentique et minimalisme — pour un titre qui parle de résilience, la sobriété visuelle fait partie du propos.",
     featured: true,
-    client: "NES (concept personnel)",
+    client: "NES — concept personnel",
     annee: "2024",
-    role: "Direction artistique",
+    role: "Direction artistique · Retouche",
     process: [
       {
-        titre: "RECHERCHE",
+        titre: "INTENTION",
         texte:
-          "Analyse de l'identité existante de NES. Palette émotionnelle autour du titre : douceur, résilience, lumière. Références visuelles entre le minimalisme scandinave et le grain argentique.",
+          "NES a un univers très personnel, posé, introspectif. Le single parle de traverser quelque chose de difficile sans effondrement. L'image devait tenir cette tension — pas de dramatisation, pas de kitsch émotionnel. Grain, cadrage serré, palette quasi monochrome.",
       },
       {
-        titre: "LIVRABLE",
+        titre: "EXÉCUTION",
         texte:
-          "Cover single + déclinaisons formats sociaux. Typographie choisie pour sa lisibilité en thumbnail. Traitement photo desaturé avec grain pour renforcer l'émotion du titre.",
+          "Traitement photo avec grain argentique ajouté en post, désaturation sélective pour isoler le sujet. Typographie sobre, hiérarchie claire. Déclinaison sur les formats Spotify, Apple Music, Instagram — chaque taille testée avant livraison.",
       },
     ],
-    outils: ["Photoshop", "Lightroom", "Illustrator"],
+    outils: ["Lightroom", "Photoshop", "Illustrator"],
   },
   {
     slug: "khali-x-le-type",
     titre: "KHALI",
     titreOutline: "x Le Type",
-    categorie: "Infographie",
-    sous_titre: "Infographie & social media",
-    couleur_ticket: "#C4A882",
+    categorie: "Communication",
+    sous_titre: "Infographie · Réseaux sociaux",
+    couleur_ticket: "#1c1409",
     lien_externe: null,
     description:
-      "Création d'infographies pour la collaboration Khali x Le Type — visuel social media et print.",
+      "Série d'infographies pour la collaboration Khali x Le Type. Deux univers graphiques distincts à faire cohabiter dans un système cohérent, lisible en miniature Instagram et impactant en A3.",
     featured: false,
     client: "Khali x Le Type",
     annee: "2023",
     role: "Infographie · Communication",
     process: [
       {
-        titre: "BRIEF",
+        titre: "CONTRAINTE",
         texte:
-          "Deux univers à faire cohabiter dans une série cohérente. Contrainte : lisible en petit format Instagram et impactant en A3 print.",
+          "Khali et Le Type ont chacun leur identité visuelle. Le brief : pas de fusion, pas de compromis mou. Une série qui porte les deux univers sans que l'un écrase l'autre. La contrainte technique — lisible en 100×100px comme en 60×80cm — a guidé toutes les décisions typographiques.",
       },
       {
         titre: "PRODUCTION",
         texte:
-          "Série de 6 visuels, système de grille commun, déclinaisons couleurs par track. Livraison en formats exportés prêts à publier.",
+          "Six visuels, un système de grille commun, déclinaisons couleurs par track. Formats livrés exportés et nommés pour publication directe. Aucun aller-retour de recadrage — tout pensé en amont pour les bons ratios.",
       },
     ],
     outils: ["Illustrator", "Photoshop", "InDesign"],

@@ -28,37 +28,44 @@ function TicketCard({ project, index }: { project: Project; index: number }) {
       >
         {/* Ticket header */}
         <div className="p-4 flex items-start justify-between">
-          <span className="font-display text-sm text-noir/60 tracking-widest uppercase">
+          <span className="font-display text-sm text-blanc-casse/40 tracking-widest uppercase">
             {project.categorie}
           </span>
-          <div className="w-2 h-2 rounded-full bg-noir/20" />
+          <div className="w-2 h-2 rounded-full bg-blanc-casse/20" />
         </div>
 
         {/* Image area */}
-        <div className="flex-1 mx-3 rounded-sm bg-noir/10 overflow-hidden flex items-center justify-center min-h-[120px]">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(0,0,0,0.2)" strokeWidth="1">
-            <rect x="3" y="3" width="18" height="18" rx="2" />
-            <circle cx="8.5" cy="8.5" r="1.5" />
-            <polyline points="21 15 16 10 5 21" />
-          </svg>
+        <div className="flex-1 mx-3 rounded-sm overflow-hidden flex items-center justify-center min-h-[120px] relative bg-blanc-casse/5">
+          {project.image ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={typeof project.image === "string" ? project.image : (project.image as {asset?: {url?: string}})?.asset?.url}
+              alt={project.titre}
+              className="w-full h-full object-cover absolute inset-0"
+            />
+          ) : (
+            <span className="font-display text-[clamp(2rem,6vw,3.5rem)] text-blanc-casse/8 tracking-widest select-none px-4 text-center leading-none">
+              {project.titreOutline ?? project.titre}
+            </span>
+          )}
         </div>
 
         {/* Ticket footer */}
         <div className="p-4 pt-3">
-          <h3 className="font-display text-2xl text-noir leading-tight tracking-wide">
+          <h3 className="font-display text-2xl text-blanc-casse leading-tight tracking-wide">
             {project.titre}
           </h3>
-          <p className="text-noir/60 text-sm font-body mt-1">{project.sous_titre}</p>
+          <p className="text-blanc-casse/50 text-sm font-body mt-1">{project.sous_titre}</p>
         </div>
 
         {/* Perforations bottom */}
         <div className="flex items-center gap-2 px-4 pb-4" aria-hidden="true">
           {Array(6).fill(null).map((_, i) => (
-            <div key={i} className="w-2 h-2 rounded-full bg-noir/20" />
+            <div key={i} className="w-2 h-2 rounded-full bg-blanc-casse/15" />
           ))}
-          <div className="flex-1 border-t border-dashed border-noir/20" />
+          <div className="flex-1 border-t border-dashed border-blanc-casse/15" />
           {Array(6).fill(null).map((_, i) => (
-            <div key={i} className="w-2 h-2 rounded-full bg-noir/20" />
+            <div key={i} className="w-2 h-2 rounded-full bg-blanc-casse/15" />
           ))}
         </div>
 

@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 import type { Project } from "@/lib/projects";
 
 const fade = (delay = 0) => ({
-  initial: { opacity: 0, y: 24 },
+  initial: { opacity: 0, y: 16 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.7, ease: "easeOut" as const, delay },
+  transition: { duration: 0.5, ease: "easeOut" as const, delay: delay * 0.4 },
 });
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
@@ -123,43 +123,42 @@ export default function ProjectDetail({ project }: { project: Project }) {
         <SectionLabel>Visuels</SectionLabel>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
-          {/* Placeholder cards (remplacées par vraies images via Sanity) */}
-          {[
-            { label: "Cover principale", tall: true },
-            { label: "Déclinaison réseaux", tall: false },
-            { label: "Détail typographie", tall: false },
-            { label: "Mockup merch", tall: true },
-          ].map(({ label, tall }, i) => (
-            <motion.div
-              key={i}
-              whileHover={{ y: -6 }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
-              className="relative overflow-hidden rounded-sm bg-surface group cursor-pointer"
-              style={{ minHeight: tall ? 420 : 260 }}
-            >
-              {/* Placeholder gradient */}
-              <div
-                className="absolute inset-0 transition-all duration-500 group-hover:scale-[1.02] group-hover:brightness-110"
-                style={{
-                  background: `linear-gradient(135deg, hsl(${i * 40}deg 12% 12%), hsl(${i * 40 + 50}deg 18% 20%))`,
-                }}
-              />
-              {/* Icône photo */}
-              <div className="absolute inset-0 flex items-center justify-center opacity-15">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#c8c8c8" strokeWidth="1">
-                  <rect x="3" y="3" width="18" height="18" rx="2" />
-                  <circle cx="8.5" cy="8.5" r="1.5" />
-                  <polyline points="21 15 16 10 5 21" />
-                </svg>
-              </div>
-              {/* Overlay hover */}
-              <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/85 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                <span className="text-[11px] font-mono uppercase tracking-[0.15em] text-[#c8c8c8]">
-                  {label}
-                </span>
-              </div>
-            </motion.div>
-          ))}
+          {project.images && project.images.length > 0 ? (
+            // Vraies images depuis Sanity
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            project.images.map((img: any, i: number) => (
+              <motion.div
+                key={i}
+                whileHover={{ y: -6 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                className={`relative overflow-hidden rounded-sm bg-surface group ${i === 0 || i === 3 ? "md:row-span-1" : ""}`}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={typeof img === "string" ? img : img.asset?.url}
+                  alt={img.alt ?? `Visuel ${i + 1}`}
+                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                />
+                {img.caption && (
+                  <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/85 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <span className="text-[11px] font-mono uppercase tracking-[0.15em] text-[#c8c8c8]">
+                      {img.caption}
+                    </span>
+                  </div>
+                )}
+              </motion.div>
+            ))
+          ) : (
+            // Placeholder éditorial quand pas d'images
+            <div className="md:col-span-2 border border-white/[0.06] rounded-sm flex flex-col items-center justify-center py-24 gap-4">
+              <span className="font-display text-[clamp(3rem,8vw,6rem)] text-white/5 tracking-widest select-none">
+                {project.titre}
+              </span>
+              <p className="text-[11px] font-mono uppercase tracking-[0.25em] text-[#787878]">
+                Visuels à venir
+              </p>
+            </div>
+          )}
         </div>
       </motion.section>
 
