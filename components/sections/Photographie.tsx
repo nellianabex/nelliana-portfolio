@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { useRef, useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Ticker from "@/components/ui/Ticker";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
@@ -105,15 +105,133 @@ function PhotoCard({ photo, index }: { photo: Photo; index: number }) {
   );
 }
 
+function GalleryModal({
+  photos,
+  onClose,
+}: {
+  photos: Photo[];
+  onClose: () => void;
+}) {
+  const [selected, setSelected] = useState<number | null>(null);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        if (selected !== null) setSelected(null);
+        else onClose();
+      }
+      if (e.key === "ArrowRight" && selected !== null)
+        setSelected((s) => (s! + 1) % photos.length);
+      if (e.key === "ArrowLeft" && selected !== null)
+        setSelected((s) => (s! - 1 + photos.length) % photos.length);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [selected, onClose, photos.length]);
+
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = ""; };
+  }, []);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.25 }}
+      className="fixed inset-0 z-[100] bg-noir/95 flex flex-col"
+      onClick={() => selected !== null ? setSelected(null) : onClose()}
+    >
+      {/* Header */}
+      <div
+        className="flex items-center justify-between px-6 py-5 border-b border-white/[0.07] flex-shrink-0"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-[#787878]">
+          {photos.length} photos
+        </span>
+        <button
+          onClick={onClose}
+          className="font-mono text-[11px] uppercase tracking-[0.15em] text-[#787878] hover:text-blanc-casse transition-colors"
+        >
+          Fermer ✕
+        </button>
+      </div>
+
+      {/* Grid */}
+      <div
+        className="flex-1 overflow-y-auto p-4 md:p-6"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="columns-2 md:columns-3 lg:columns-4 gap-3 space-y-3">
+          {photos.map((photo, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: i * 0.02 }}
+              className="break-inside-avoid overflow-hidden rounded-sm cursor-pointer group"
+              onClick={() => setSelected(i)}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                loading="lazy"
+              />
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Lightbox */}
+      <AnimatePresence>
+        {selected !== null && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[110] bg-black/95 flex items-center justify-center p-4"
+            onClick={() => setSelected(null)}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={photos[selected].src}
+              alt={photos[selected].alt}
+              className="max-h-[90vh] max-w-[90vw] object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <button
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-white/60 hover:text-white text-3xl px-4 py-2"
+              onClick={(e) => { e.stopPropagation(); setSelected((s) => (s! - 1 + photos.length) % photos.length); }}
+            >‹</button>
+            <button
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-white/60 hover:text-white text-3xl px-4 py-2"
+              onClick={(e) => { e.stopPropagation(); setSelected((s) => (s! + 1) % photos.length); }}
+            >›</button>
+            <span className="absolute bottom-6 left-1/2 -translate-x-1/2 font-mono text-[11px] tracking-widest text-white/40">
+              {selected + 1} / {photos.length}
+            </span>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
+  );
+}
+
 interface PhotographieProps {
   photos?: Photo[];
 }
 
 export default function Photographie({ photos = placeholderPhotos }: PhotographieProps) {
+  const [galleryOpen, setGalleryOpen] = useState(false);
   const galleryRef = useRef<HTMLDivElement>(null);
   const isDragging = useRef(false);
   const startX = useRef(0);
   const scrollLeft = useRef(0);
+  const openGallery = useCallback(() => setGalleryOpen(true), []);
 
   const handleMouseDown = (e: React.MouseEvent) => {
     if (!galleryRef.current) return;
@@ -143,6 +261,12 @@ export default function Photographie({ photos = placeholderPhotos }: Photographi
   };
 
   return (
+    <>
+    <AnimatePresence>
+      {galleryOpen && (
+        <GalleryModal photos={photos} onClose={() => setGalleryOpen(false)} />
+      )}
+    </AnimatePresence>
     <section
       id="photographie"
       className="py-16 md:py-36 bg-surface overflow-hidden"
@@ -162,13 +286,12 @@ export default function Photographie({ photos = placeholderPhotos }: Photographi
             <h2 className="font-display text-4xl md:text-7xl text-blanc-casse tracking-wide">
               PHOTOGRAPHIE
             </h2>
-            <a
-              href="#contact"
+            <button
+              onClick={openGallery}
               className="hidden md:inline-flex items-center gap-2 px-6 py-2.5 bg-fluo text-noir font-body font-semibold text-sm rounded-full hover:scale-105 transition-transform duration-200"
-              aria-label="Voir plus de photographies"
             >
               Voir plus →
-            </a>
+            </button>
           </div>
         </AnimatedSection>
       </div>
@@ -198,13 +321,14 @@ export default function Photographie({ photos = placeholderPhotos }: Photographi
 
       {/* Mobile CTA */}
       <div className="mt-8 px-5 md:hidden">
-        <a
-          href="#contact"
+        <button
+          onClick={openGallery}
           className="inline-flex items-center gap-2 px-6 py-2.5 bg-fluo text-noir font-body font-semibold text-sm rounded-full"
         >
           Voir plus →
-        </a>
+        </button>
       </div>
     </section>
+    </>
   );
 }
