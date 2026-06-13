@@ -17,12 +17,14 @@ export interface Photo {
 }
 
 const placeholderPhotos: Photo[] = [
-  { src: "/assets/photos/concert-1.jpg", alt: "Concert — ambiance scène", artiste: "Artiste", event: "Event 2024", date: "2024", ville: "Paris", width: 800, height: 600 },
-  { src: "/assets/photos/concert-2.jpg", alt: "Scène — lumières colorées", artiste: "Artiste", event: "Event 2024", date: "2024", ville: "Lyon", width: 600, height: 800 },
-  { src: "/assets/photos/concert-3.jpg", alt: "Portrait artiste", artiste: "Artiste", event: "Event 2024", date: "2024", ville: "Paris", width: 900, height: 600 },
-  { src: "/assets/photos/concert-4.jpg", alt: "Foule concert", artiste: "Artiste", event: "Event 2024", date: "2024", ville: "Bordeaux", width: 700, height: 600 },
-  { src: "/assets/photos/concert-5.jpg", alt: "Backstage", artiste: "Artiste", event: "Event 2025", date: "2025", ville: "Paris", width: 600, height: 800 },
-  { src: "/assets/photos/concert-6.jpg", alt: "Scène principale", artiste: "Artiste", event: "Event 2025", date: "2025", ville: "Marseille", width: 1000, height: 600 },
+  { src: "/assets/photos/photo-01.jpg", alt: "Photographie", artiste: "Nelliana BEX", event: "Série 2024", date: "2024", ville: "France", width: 2956, height: 1970 },
+  { src: "/assets/photos/photo-02.jpg", alt: "Photographie", artiste: "Nelliana BEX", event: "Série 2024", date: "2024", ville: "France", width: 2000, height: 2667 },
+  { src: "/assets/photos/photo-03.jpg", alt: "Photographie", artiste: "Nelliana BEX", event: "Série 2024", date: "2024", ville: "France", width: 2000, height: 2667 },
+  { src: "/assets/photos/photo-04.jpg", alt: "Photographie", artiste: "Nelliana BEX", event: "Série 2024", date: "2024", ville: "France", width: 2000, height: 2667 },
+  { src: "/assets/photos/photo-05.jpg", alt: "Photographie", artiste: "Nelliana BEX", event: "Série 2024", date: "2024", ville: "France", width: 2000, height: 2667 },
+  { src: "/assets/photos/photo-06.jpg", alt: "Photographie", artiste: "Nelliana BEX", event: "Série 2024", date: "2024", ville: "France", width: 2000, height: 2667 },
+  { src: "/assets/photos/photo-07.jpg", alt: "Photographie", artiste: "Nelliana BEX", event: "Série 2024", date: "2024", ville: "France", width: 2000, height: 2668 },
+  { src: "/assets/photos/photo-08.jpg", alt: "Photographie", artiste: "Nelliana BEX", event: "Série 2024", date: "2024", ville: "France", width: 1940, height: 2587 },
 ];
 
 function PhotoCard({ photo, index }: { photo: Photo; index: number }) {
@@ -40,26 +42,19 @@ function PhotoCard({ photo, index }: { photo: Photo; index: number }) {
       onMouseLeave={() => setIsHovered(false)}
       data-cursor
     >
-      {/* Placeholder gradient for images not yet loaded */}
-      <div
-        className="absolute inset-0 transition-all duration-300"
+      {/* Image réelle */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={photo.src}
+        alt={photo.alt}
+        className="absolute inset-0 w-full h-full object-cover transition-all duration-400"
         style={{
-          background: `linear-gradient(135deg, hsl(${index * 37}deg 20% 15%), hsl(${index * 37 + 60}deg 30% 25%))`,
-          transform: isHovered ? "scale(1.02)" : "scale(1)",
-          filter: isHovered ? "brightness(1.15)" : "brightness(0.8)",
+          transform: isHovered ? "scale(1.04)" : "scale(1)",
+          filter: isHovered ? "brightness(1.1)" : "brightness(0.85)",
           transition: "transform 0.4s ease, filter 0.4s ease",
         }}
-        aria-hidden="true"
-      >
-        {/* Photo icon placeholder */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-20">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1">
-            <rect x="3" y="3" width="18" height="18" rx="2" />
-            <circle cx="8.5" cy="8.5" r="1.5" />
-            <polyline points="21 15 16 10 5 21" />
-          </svg>
-        </div>
-      </div>
+        loading="lazy"
+      />
 
       {/* Info overlay */}
       <motion.div

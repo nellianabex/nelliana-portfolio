@@ -134,33 +134,6 @@ export const projects: Project[] = [
     ],
     outils: ["Illustrator", "Photoshop", "InDesign"],
   },
-  {
-    slug: "photographie",
-    titre: "PHOTO",
-    titreOutline: "graphie",
-    categorie: "Direction artistique",
-    sous_titre: "Photographie · Portrait & Concert",
-    couleur_ticket: "#111111",
-    lien_externe: "https://www.behance.net/anaillendesign",
-    description:
-      "Série de photos — portraits, concerts, instants volés. Un œil, une lumière, une décision au moment du déclenchement.",
-    featured: false,
-    image: "/assets/projects/photographie/01.jpg",
-    images: [
-      "/assets/projects/photographie/01.jpg",
-      "/assets/projects/photographie/02.jpg",
-      "/assets/projects/photographie/03.jpg",
-      "/assets/projects/photographie/04.jpg",
-      "/assets/projects/photographie/05.jpg",
-      "/assets/projects/photographie/06.jpg",
-      "/assets/projects/photographie/07.jpg",
-      "/assets/projects/photographie/08.jpg",
-    ],
-    client: "Perso",
-    annee: "2023–2024",
-    role: "Photographie",
-    outils: ["Lightroom", "Photoshop"],
-  },
 ];
 
 export const categories = [
