@@ -81,9 +81,11 @@ export default function RootLayout({
         <SmoothScroll>
           <CustomCursor />
           {/* Banner management */}
-          <div className="w-full bg-fluo text-noir text-center py-2 px-4 font-body text-[10px] sm:text-xs font-semibold tracking-wide z-[60] relative leading-snug">
+          <div className="fixed top-0 left-0 right-0 w-full bg-fluo text-noir text-center py-2 px-4 font-body text-[10px] sm:text-xs font-semibold tracking-wide z-[70] leading-snug">
             Management d&apos;artistes : complet pour le moment. Autres collaborations bienvenues.
           </div>
+          {/* Spacer pour compenser le bandeau fixed */}
+          <div className="h-8" />
           <Nav />
           <main>{children}</main>
           <Footer />
