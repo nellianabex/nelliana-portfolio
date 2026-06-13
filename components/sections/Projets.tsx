@@ -111,7 +111,7 @@ export default function Projets({ projects }: ProjetsProps) {
   const filtered = useMemo(() => {
     if (activeCategory === "Tout") return projects;
     return projects.filter((p) => p.categorie === activeCategory);
-  }, [activeCategory]);
+  }, [activeCategory, projects]);
 
   return (
     <section
