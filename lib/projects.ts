@@ -3,6 +3,12 @@ export interface ProcessBlock {
   texte: string;
 }
 
+export interface SanityImage {
+  asset?: { url?: string; _ref?: string };
+  alt?: string;
+  caption?: string;
+}
+
 export interface Project {
   slug: string;
   titre: string;
@@ -12,7 +18,8 @@ export interface Project {
   description?: string;
   couleur_ticket: string;
   lien_externe: string | null;
-  images?: string[];
+  image?: SanityImage | string; // image miniature (depuis allProjets GROQ)
+  images?: (SanityImage | string)[];
   featured?: boolean;
   client?: string;
   annee?: string;
