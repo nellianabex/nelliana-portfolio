@@ -36,7 +36,7 @@ export const projects: Project[] = [
     categorie: "Direction artistique",
     sous_titre: "Concept cover · Direction artistique",
     couleur_ticket: "#1a1a1a",
-    lien_externe: "https://www.behance.net/anaillendesign",
+    lien_externe: "https://www.behance.net/gallery/215082391/Concept-cover-2069-(PLK)",
     description:
       "Concept de direction artistique pour l'album 2069' de PLK. Palette désaturée, esthétique futuriste, système visuel déclinable sur tous les supports — cover, singles, merch.",
     featured: true,
@@ -72,7 +72,7 @@ export const projects: Project[] = [
     categorie: "Direction artistique",
     sous_titre: "Concept cover single · DA",
     couleur_ticket: "#0d1f2d",
-    lien_externe: "https://www.behance.net/anaillendesign",
+    lien_externe: "https://www.behance.net/gallery/215082919/Concept-cover-Ca-Va-Aller-(NeS)",
     description:
       "Direction artistique pour le single Ça Va Aller de NES. Traitement photo entre grain argentique et minimalisme — pour un titre qui parle de résilience, la sobriété visuelle fait partie du propos.",
     featured: true,
@@ -107,7 +107,7 @@ export const projects: Project[] = [
     categorie: "Communication",
     sous_titre: "Infographie · Réseaux sociaux",
     couleur_ticket: "#1c1409",
-    lien_externe: "https://www.behance.net/anaillendesign",
+    lien_externe: "https://www.behance.net/gallery/215083507/Infographie-Khali-de-Palmer-a-la-conscration",
     description:
       "Série d'infographies pour la collaboration Khali x Le Type. Deux univers graphiques distincts à faire cohabiter dans un système cohérent, lisible en miniature Instagram et impactant en A3.",
     featured: false,
