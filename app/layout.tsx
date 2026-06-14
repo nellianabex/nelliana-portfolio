@@ -36,37 +36,47 @@ const dmMono = DM_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://nellianabex.fr"),
   title: {
-    default: "Nelliana BEX — Direction Artistique & Communication",
+    default: "Nelliana BEX — Directrice Artistique Freelance & Graphiste Musique",
     template: "%s | Nelliana BEX",
   },
   description:
-    "Portfolio de Nelliana BEX — Directrice artistique digitale, manager d'artistes, photographe et chargée de communication. Disponible pour de nouveaux projets.",
+    "Nelliana BEX, directrice artistique freelance spécialisée musique et rap. Graphisme, direction artistique, photographie, communication et management d'artistes. Disponible pour vos projets.",
   keywords: [
-    "direction artistique",
-    "communication",
-    "photographie",
-    "management artistes",
-    "webdesign",
-    "branding",
-    "graphisme",
+    "directrice artistique freelance",
+    "graphiste rap",
+    "direction artistique musique",
+    "graphiste freelance Paris",
+    "direction artistique rap",
+    "manager artiste musique",
+    "photographe artiste",
+    "graphisme pochette album",
+    "communication artiste rap",
+    "branding musique",
+    "infographie réseaux sociaux artiste",
+    "webdesign portfolio créatif",
   ],
   openGraph: {
     type: "website",
     locale: "fr_FR",
     siteName: "Nelliana BEX",
-    title: "Nelliana BEX — Direction Artistique & Communication",
+    title: "Nelliana BEX — Directrice Artistique Freelance & Graphiste Musique",
     description:
-      "Portfolio de Nelliana BEX — Directrice artistique digitale, manager d'artistes, photographe.",
+      "Directrice artistique freelance spécialisée musique et rap. Graphisme, photographie, communication, management d'artistes.",
+    images: [{ url: "/nelliana-og.jpg", width: 1200, height: 630, alt: "Nelliana BEX — Directrice Artistique Freelance" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nelliana BEX",
+    title: "Nelliana BEX — Directrice Artistique Freelance & Graphiste Musique",
     description:
-      "Portfolio de Nelliana BEX — Direction Artistique & Communication",
+      "Directrice artistique freelance spécialisée musique et rap. Graphisme, photographie, communication.",
+    images: ["/nelliana-og.jpg"],
   },
   robots: {
     index: true,
     follow: true,
+  },
+  alternates: {
+    canonical: "https://nellianabex.fr",
   },
 };
 
@@ -78,6 +88,40 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${bebasNeue.variable} ${inter.variable} ${caveat.variable} ${dmMono.variable}`}>
       <body className="antialiased bg-noir text-blanc-casse">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Nelliana BEX",
+              url: "https://nellianabex.fr",
+              image: "https://nellianabex.fr/nelliana-portrait.png",
+              jobTitle: "Directrice artistique freelance & Graphiste",
+              description:
+                "Directrice artistique freelance spécialisée musique et rap. Graphisme, photographie, communication, management d'artistes.",
+              knowsAbout: [
+                "Direction artistique",
+                "Graphisme",
+                "Photographie",
+                "Communication",
+                "Management d'artistes",
+                "Branding musique",
+                "Rap et culture urbaine",
+              ],
+              sameAs: [
+                "https://www.behance.net/anaillendesign",
+                "https://www.instagram.com/n3lliana",
+              ],
+              makesOffer: [
+                { "@type": "Offer", itemOffered: { "@type": "Service", name: "Direction artistique" } },
+                { "@type": "Offer", itemOffered: { "@type": "Service", name: "Graphisme et communication" } },
+                { "@type": "Offer", itemOffered: { "@type": "Service", name: "Photographie" } },
+                { "@type": "Offer", itemOffered: { "@type": "Service", name: "Management d'artistes" } },
+              ],
+            }),
+          }}
+        />
         <SmoothScroll>
           <CustomCursor />
           {/* Banner management */}

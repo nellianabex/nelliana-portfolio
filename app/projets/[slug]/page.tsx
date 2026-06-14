@@ -26,19 +26,25 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const baseUrl = "https://nellianabex.fr";
+
   // Essaie Sanity d'abord
   try {
-    const project = await sanityClient.fetch(queries.projetBySlug, {
-      slug: params.slug,
-    });
+    const project = await sanityClient.fetch(queries.projetBySlug, { slug: params.slug });
     if (project) {
+      const title = `${project.titre}${project.titreOutline ? " " + project.titreOutline : ""} — Direction Artistique`;
+      const description = project.description ?? project.sous_titre;
+      const ogImage = project.image ? urlFor(project.image).width(1200).height(630).url() : `${baseUrl}/nelliana-og.jpg`;
       return {
-        title: `${project.titre}${project.titreOutline ? " " + project.titreOutline : ""}`,
-        description: project.description ?? project.sous_titre,
+        title,
+        description,
+        alternates: { canonical: `${baseUrl}/projets/${params.slug}` },
         openGraph: {
           title: `${project.titre} — Nelliana BEX`,
-          description: project.description ?? project.sous_titre,
+          description,
+          images: [{ url: ogImage, width: 1200, height: 630 }],
         },
+        twitter: { card: "summary_large_image", title, description, images: [ogImage] },
       };
     }
   } catch {
@@ -48,9 +54,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // Fallback statique
   const project = projects.find((p) => p.slug === params.slug);
   if (!project) return { title: "Projet introuvable" };
+
+  const title = `${project.titre}${project.titreOutline ? " " + project.titreOutline : ""} — Direction Artistique`;
+  const description = project.description ?? project.sous_titre ?? "";
+  const coverImage = typeof project.image === "string" ? `${baseUrl}${project.image}` : `${baseUrl}/nelliana-og.jpg`;
+
   return {
-    title: project.titre,
-    description: project.description ?? project.sous_titre,
+    title,
+    description,
+    alternates: { canonical: `${baseUrl}/projets/${params.slug}` },
+    openGraph: {
+      title: `${project.titre} — Nelliana BEX`,
+      description,
+      images: [{ url: coverImage, width: 1200, height: 630 }],
+    },
+    twitter: { card: "summary_large_image", title, description, images: [coverImage] },
   };
 }
 
