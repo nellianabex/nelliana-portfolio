@@ -1,0 +1,128 @@
+# SEO Content Engine — Nelliana BEX Portfolio
+# Auto-généré le 2026-06-15. Éditable à tout moment.
+
+project:
+  name: "Nelliana BEX"
+  tagline: "Graphiste rap et Manager d'artistes freelance"
+  description: "Portfolio de Nelliana BEX — Directrice artistique, graphiste rap freelance, photographe et manager d'artistes indépendants."
+  website: "https://nellianabex.fr"
+  target_audience:
+    primary: "Labels, artistes rap/urbain, maisons de disques, managers cherchant une DA ou graphiste"
+    secondary: "Artistes indépendants cherchant un manager ou une DA pour leur identité visuelle"
+    technical_level: "mixed"
+
+author:
+  name: "Nelliana BEX"
+  title: "Directrice artistique freelance & Manager d'artistes"
+  bio: "Directrice artistique spécialisée musique urbaine, graphiste rap freelance et manager d'artistes indépendants."
+  website: "https://nellianabex.fr"
+  social_links:
+    instagram: "https://www.instagram.com/n3lliana"
+    behance: "https://www.behance.net/anaillendesign"
+
+trust_signals:
+  review_links:
+    google_my_business: "https://share.google/9n521Ef8LT1RxsBlr"
+  testimonials: []
+  metrics:
+    - "Collaborations avec des artistes certifiés double disque de platine et single d'or"
+    - "K.S.A — 54 800 auditeurs mensuels Spotify"
+    - "Okko — 5 824 auditeurs mensuels Spotify"
+
+cms:
+  type: "Next.js 14 App Router"
+  blog_directory: "content/blog"
+  docs_directory: "non trouvé"
+  frontmatter_format: "yaml"
+  date_format: "YYYY-MM-DD"
+  slug_style: "kebab-case"
+  slug_max_words: 5
+  image_directory: "public/assets"
+  frontmatter_schema:
+    required:
+      - title
+      - description
+      - date
+      - slug
+    optional:
+      - author
+      - tags
+      - category
+      - image
+      - draft
+
+competitors:
+  - name: "Fasmer"
+    website: "https://www.instagram.com/fasmer"
+    id: "comp_fasmer"
+    category: "Graphiste rap"
+  - name: "Fifou"
+    website: "https://www.instagram.com/misterfifou"
+    id: "comp_fifou"
+    category: "Photographe / DA rap"
+  - name: "Rægular (Samuel Lamidey)"
+    website: "https://www.instagram.com/raegular"
+    id: "comp_raegular"
+    category: "DA rap (Nekfeu, Lomepal, Alpha Wann)"
+  - name: "gbcpierre (Pierre Fischer)"
+    website: "https://www.instagram.com/gbcpierre"
+    id: "comp_gbcpierre"
+    category: "DA rap (Hamza)"
+  - name: "Le Stoodio"
+    website: "https://www.instagram.com/lestoodio"
+    id: "comp_lestoodio"
+    category: "Studio graphisme rap (PLK)"
+  - name: "Parages Studio"
+    website: "https://www.instagram.com/paragesstudio"
+    id: "comp_parages"
+    category: "Studio graphisme rap (C4lus)"
+  - name: "graphiste.binks"
+    website: "https://www.instagram.com/graphiste.binks"
+    id: "comp_binks"
+    category: "Graphiste rap freelance (12.9k)"
+  - name: "heyimleaaa (Léa Esmaili)"
+    website: "https://www.instagram.com/heyimleaaa"
+    id: "comp_lea"
+    category: "DA freelance (Theodora, Yvnnis)"
+  - name: "Alexis Donavy"
+    website: "https://www.instagram.com/alexisdonavy"
+    id: "comp_donavy"
+    category: "Manager (So la Lune)"
+
+seo:
+  primary_topics:
+    - "graphiste rap freelance"
+    - "direction artistique musique"
+    - "graphiste pochette rap"
+    - "management artiste indépendant"
+    - "identité visuelle artiste rap"
+  brand_terms:
+    - "Nelliana BEX"
+    - "nellianabex"
+    - "n3lliana"
+  avoid_terms: []
+  target_regions: ["France"]
+  language: "fr"
+
+content:
+  min_word_count: 800
+  max_word_count: 2500
+  default_author: "Nelliana BEX"
+  tone: "expert-créatif — proche du milieu, pas corporate"
+  include_faq: true
+  include_toc: false
+  cta_text: "Travaillons ensemble"
+  cta_url: "https://nellianabex.fr/#contact"
+  max_posts_per_month: 4
+  requires_human_review: true
+
+technical_seo:
+  meta_description_max_chars: 160
+  title_tag_max_chars: 60
+  image_alt_text_required: true
+  canonical_url_pattern: "https://nellianabex.fr/blog/{slug}"
+
+integrations:
+  seo_tool: "none"
+  analytics: "none"
+  search_console: false

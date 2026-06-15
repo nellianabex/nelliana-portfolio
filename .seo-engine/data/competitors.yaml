@@ -1,0 +1,118 @@
+last_updated: "2026-06-15"
+last_verified: "2026-06-15"
+
+competitors:
+  - id: "comp_fasmer"
+    name: "Fasmer"
+    website: "https://www.instagram.com/fasmer"
+    category: "Graphiste rap"
+    pricing_model: "unknown"
+    strengths: "Forte notoriété dans le milieu rap FR, style reconnaissable"
+    weaknesses: "Pas de site portfolio visible, pas de management"
+    notes: "Référence graphisme rap FR. Pas encore vérifié."
+
+  - id: "comp_fifou"
+    name: "Fifou"
+    website: "https://www.instagram.com/misterfifou"
+    category: "Photographe / DA rap"
+    pricing_model: "unknown"
+    strengths: "Photographe n°1 du rap FR (Booba, PLK, Ninho), très forte légitimité"
+    weaknesses: "Pas de management, niche photographie"
+    notes: "Concurrent indirect sur la photo. Pas encore vérifié."
+
+  - id: "comp_raegular"
+    name: "Rægular"
+    website: "https://www.instagram.com/raegular"
+    category: "DA rap (Nekfeu, Lomepal, Alpha Wann)"
+    pricing_model: "unknown"
+    strengths: "DA pointue, projets artistiques high-end, Nekfeu/Lomepal"
+    weaknesses: "Très sélectif, peu accessible, pas de management"
+    notes: "Concurrent DA haut de gamme. Pas encore vérifié."
+
+  - id: "comp_gbcpierre"
+    name: "gbcpierre"
+    website: "https://www.instagram.com/gbcpierre"
+    category: "DA rap (Hamza)"
+    pricing_model: "unknown"
+    strengths: "Identité forte liée à Hamza / GBC, style très reconnaissable"
+    weaknesses: "Profil mono-artiste apparent, peu de visibilité freelance"
+    notes: "Concurrent DA. Pas encore vérifié."
+
+  - id: "comp_lestoodio"
+    name: "Le Stoodio"
+    website: "https://www.instagram.com/lestoodio"
+    category: "Studio graphisme rap"
+    pricing_model: "studio"
+    strengths: "Structure studio (pas solo), PLK dans le portfolio, production visuelle de masse"
+    weaknesses: "Studio = moins flexible qu'un freelance, moins de lien personnel avec l'artiste"
+    notes: "Concurrent studio. Pas encore vérifié."
+
+  - id: "comp_parages"
+    name: "Parages Studio"
+    website: "https://www.instagram.com/paragesstudio"
+    category: "Studio graphisme rap"
+    pricing_model: "studio"
+    strengths: "C4lus dans le portfolio, esthétique soignée"
+    weaknesses: "Structure studio"
+    notes: "Concurrent studio. Pas encore vérifié."
+
+  - id: "comp_binks"
+    name: "graphiste.binks"
+    website: "https://www.instagram.com/graphiste.binks"
+    category: "Graphiste rap freelance"
+    pricing_model: "freelance"
+    strengths: "12 900 abonnés Instagram, bonne visibilité freelance"
+    weaknesses: "Pas de management, pas de DA complète apparente"
+    notes: "Concurrent direct freelance. Pas encore vérifié."
+
+  - id: "comp_lea"
+    name: "heyimleaaa (Léa Esmaili)"
+    website: "https://www.instagram.com/heyimleaaa"
+    category: "DA freelance (Theodora, Yvnnis)"
+    pricing_model: "freelance"
+    strengths: "Artistes montants dans le portfolio, esthétique féminine différenciante"
+    weaknesses: "Pas de management, portfolio niche"
+    notes: "Concurrent direct DA freelance. Pas encore vérifié."
+
+  - id: "comp_donavy"
+    name: "Alexis Donavy"
+    website: "https://www.instagram.com/alexisdonavy"
+    category: "Manager (So la Lune)"
+    pricing_model: "management"
+    strengths: "Manager référence rap FR féminin, So la Lune"
+    weaknesses: "Pas de DA/graphisme, mono-service"
+    notes: "Concurrent management uniquement. Pas encore vérifié."
+
+feature_matrix:
+  - feature_id: "feat_cover_album"
+    our_project:
+      supported: true
+      details: "PLK 2069, NES Ça Va Aller — concepts complets livrés"
+      tier: "freelance"
+    competitors:
+      comp_fasmer: { supported: null, details: "", confidence: "unverified", last_verified: "" }
+      comp_fifou: { supported: null, details: "", confidence: "unverified", last_verified: "" }
+      comp_raegular: { supported: true, details: "Nekfeu, Lomepal — haute gamme", confidence: "from_public_profile", last_verified: "2026-06-15" }
+      comp_lestoodio: { supported: true, details: "PLK", confidence: "from_public_profile", last_verified: "2026-06-15" }
+      comp_binks: { supported: null, details: "", confidence: "unverified", last_verified: "" }
+
+  - feature_id: "feat_shooting_artiste"
+    our_project:
+      supported: true
+      details: "44 photos de référence, direction artistique incluse"
+      tier: "freelance"
+    competitors:
+      comp_fifou: { supported: true, details: "Photographe n°1 rap FR", confidence: "from_public_profile", last_verified: "2026-06-15" }
+      comp_raegular: { supported: null, details: "", confidence: "unverified", last_verified: "" }
+      comp_binks: { supported: null, details: "", confidence: "unverified", last_verified: "" }
+
+  - feature_id: "feat_management_artiste"
+    our_project:
+      supported: true
+      details: "K.S.A (54 800 auditeurs), Okko (5 824 auditeurs) — complet pour le moment"
+      tier: "freelance"
+    competitors:
+      comp_donavy: { supported: true, details: "So la Lune", confidence: "from_public_profile", last_verified: "2026-06-15" }
+      comp_fasmer: { supported: false, details: "graphisme uniquement", confidence: "from_public_profile", last_verified: "2026-06-15" }
+      comp_binks: { supported: false, details: "graphisme uniquement", confidence: "from_public_profile", last_verified: "2026-06-15" }
+      comp_lea: { supported: false, details: "DA uniquement", confidence: "from_public_profile", last_verified: "2026-06-15" }

@@ -1,0 +1,154 @@
+last_updated: "2026-06-15"
+
+clusters:
+  - cluster_id: "tc_graphiste_rap"
+    name: "Graphiste Rap Freelance"
+    description: "Tout ce qui concerne la création graphique pour artistes rap — pochettes, identités visuelles, infographies, réseaux sociaux."
+
+    pillar:
+      title: "Graphiste Rap Freelance : Guide complet"
+      target_keyword: "graphiste rap freelance"
+      slug: "graphiste-rap-freelance"
+      status: "planned"
+      blog_slug: ""
+      note: "SERP requis avant rédaction — demander les top 5 résultats Google pour ce mot-clé"
+
+    cluster_pages:
+      - title: "Comment créer une pochette de single rap"
+        target_keyword: "graphiste pochette rap"
+        slug: "pochette-single-rap"
+        angle: "Process étape par étape vu du côté de la DA — brief, recherche visuelle, livraison"
+        status: "planned"
+        blog_slug: ""
+
+      - title: "Infographie réseaux sociaux pour artiste rap"
+        target_keyword: "infographie réseaux sociaux artiste"
+        slug: "infographie-reseaux-artiste-rap"
+        angle: "Formats, ratios, exemples concrets tirés de vrais projets (Khali x Le Type)"
+        status: "planned"
+        blog_slug: ""
+
+      - title: "Identité visuelle artiste rap : tout ce qu'il faut savoir"
+        target_keyword: "identité visuelle artiste rap"
+        slug: "identite-visuelle-artiste-rap"
+        angle: "Différence entre un logo et une vraie identité visuelle — ce que les artistes ratent souvent"
+        status: "planned"
+        blog_slug: ""
+
+      - title: "Trouver un graphiste pour son projet rap"
+        target_keyword: "trouver graphiste pour artiste rap"
+        slug: "trouver-graphiste-rap"
+        angle: "Checklist concrète : portfolio, brief, prix, red flags — écrit par quelqu'un dans le milieu"
+        status: "planned"
+        blog_slug: ""
+
+      - title: "Direction artistique d'un single rap : mon process"
+        target_keyword: "direction artistique single rap processus"
+        slug: "process-direction-artistique-single"
+        angle: "Behind-the-scenes d'un vrai projet (NES Ça Va Aller) — unique car c'est le vrai process"
+        status: "planned"
+        blog_slug: ""
+
+    linking_rules:
+      - "Chaque page cluster DOIT linker vers le pillar"
+      - "Le pillar DOIT linker vers toutes les pages cluster publiées"
+      - "Les pages cluster peuvent se cross-linker si pertinent"
+
+  - cluster_id: "tc_direction_artistique"
+    name: "Direction Artistique Musique"
+    description: "Direction artistique appliquée à la musique — concept visuel, cohérence d'un projet musical, collaboration DA/artiste."
+
+    pillar:
+      title: "Direction Artistique Musique : Guide complet"
+      target_keyword: "direction artistique musique"
+      slug: "direction-artistique-musique"
+      status: "planned"
+      blog_slug: ""
+      note: "SERP requis avant rédaction"
+
+    cluster_pages:
+      - title: "Direction artistique rap : codes visuels du genre"
+        target_keyword: "direction artistique rap"
+        slug: "direction-artistique-rap"
+        angle: "Les codes visuels spécifiques au rap FR — ce qui marche, ce qui date, ce qui différencie"
+        status: "planned"
+        blog_slug: ""
+
+      - title: "Identité visuelle artiste indépendant : par où commencer"
+        target_keyword: "identité visuelle artiste rap"
+        slug: "identite-visuelle-artiste-independant"
+        angle: "Guide pratique pour artiste sans budget agence — les étapes dans l'ordre"
+        status: "planned"
+        blog_slug: ""
+
+      - title: "Comment j'ai créé le concept visuel de PLK 2069"
+        target_keyword: "concept visuel album rap"
+        slug: "concept-visuel-plk-2069"
+        angle: "Case study 100% réel et unique — impossible à répliquer par un concurrent"
+        status: "planned"
+        blog_slug: ""
+
+    linking_rules:
+      - "Chaque page cluster DOIT linker vers le pillar"
+      - "Le pillar DOIT linker vers toutes les pages cluster publiées"
+
+  - cluster_id: "tc_management"
+    name: "Management Artiste Indépendant"
+    description: "Tout ce qui concerne le management d'artistes rap indépendants — rôle du manager, trouver un manager, développement de carrière."
+
+    pillar:
+      title: "Management artiste indépendant : Guide complet"
+      target_keyword: "management artiste indépendant"
+      slug: "management-artiste-independant"
+      status: "planned"
+      blog_slug: ""
+      note: "SERP requis avant rédaction"
+
+    cluster_pages:
+      - title: "Rôle du manager d'artiste rap en 2025"
+        target_keyword: "manager artiste rap"
+        slug: "role-manager-artiste-rap"
+        angle: "Ce que le manager fait vraiment vs ce que les artistes croient — vu de l'intérieur"
+        status: "planned"
+        blog_slug: ""
+
+      - title: "Comment trouver un manager quand on est artiste indépendant"
+        target_keyword: "comment choisir un manager artiste indépendant"
+        slug: "trouver-manager-artiste-independant"
+        angle: "Red flags, questions à poser, contrat — guide pratique écrit par un manager"
+        status: "planned"
+        blog_slug: ""
+
+      - title: "DA + management : pourquoi c'est un avantage pour un artiste"
+        target_keyword: "directrice artistique manager artiste"
+        slug: "da-et-management-artiste"
+        angle: "Argument de vente unique de Nelliana — combiner les deux côtés (créatif + stratégique)"
+        status: "planned"
+        blog_slug: ""
+
+    linking_rules:
+      - "Chaque page cluster DOIT linker vers le pillar"
+      - "Le pillar DOIT linker vers toutes les pages cluster publiées"
+
+  - cluster_id: "tc_photographie"
+    name: "Photographie Artiste"
+    description: "Photographie artistique pour artistes rap/urbain — shooting, retouche, direction."
+
+    pillar:
+      title: "Shooting photo artiste rap : guide complet"
+      target_keyword: "photographe artiste rap Paris"
+      slug: "shooting-photo-artiste-rap"
+      status: "planned"
+      blog_slug: ""
+      note: "SERP requis avant rédaction. Cluster secondaire — moins prioritaire que graphisme et management."
+
+    cluster_pages:
+      - title: "Préparer son shooting photo artiste"
+        target_keyword: "préparer shooting photo artiste rap"
+        slug: "preparer-shooting-artiste"
+        angle: "Checklist concrète — moodboard, tenue, lieu, direction — vu du photographe"
+        status: "planned"
+        blog_slug: ""
+
+    linking_rules:
+      - "Chaque page cluster DOIT linker vers le pillar"

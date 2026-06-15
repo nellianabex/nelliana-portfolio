@@ -1,0 +1,116 @@
+last_updated: "2026-06-15"
+
+queue:
+  - id: "q_001"
+    title: "Comment j'ai créé le concept visuel de PLK 2069"
+    blog_type: "thought-leadership"
+    content_type: "cluster"
+    cluster_id: "tc_direction_artistique"
+    target_keywords: ["concept visuel album rap", "direction artistique rap"]
+    target_features: ["feat_concept_da", "feat_cover_album"]
+    unique_angle: "Case study 100% réel et personnel — seule Nelliana peut raconter ce projet. Aucun concurrent ne peut écrire cet article."
+    priority: "high"
+    priority_reason: "Article unique impossible à copier, fort signal E-E-A-T, citations des métriques disponibles"
+    status: "planned"
+    estimated_word_count: 1200
+    eeat_plan: "Inclure le brief initial, les itérations visuelles, les outils utilisés (Photoshop, Illustrator, After Effects), résultat final sur Behance"
+    serp_analyzed: false
+    cannibalization_check: "passed"
+    notes: "Article idéal pour débuter — pas besoin de SERP data car c'est un case study unique"
+    depends_on: []
+    internal_link_targets: ["direction-artistique-musique", "graphiste-rap-freelance"]
+
+  - id: "q_002"
+    title: "Graphiste Rap Freelance : Guide complet"
+    blog_type: "pillar"
+    content_type: "pillar"
+    cluster_id: "tc_graphiste_rap"
+    target_keywords: ["graphiste rap freelance", "graphiste rap Paris freelance"]
+    target_features: ["feat_cover_album", "feat_infographie_rs", "feat_identite_visuelle"]
+    unique_angle: "Guide écrit par quelqu'un qui est réellement graphiste rap freelance — pas un article générique, mais des exemples et tarifs réels du milieu"
+    priority: "high"
+    priority_reason: "Pillar principal, mot-clé avec intent commercial fort, peu de concurrents avec un site optimisé sur cette requête"
+    status: "planned"
+    estimated_word_count: 2000
+    eeat_plan: "Mention des projets (PLK, NES, Khali), metrics artistes managés, lien Google My Business"
+    serp_analyzed: false
+    cannibalization_check: "passed"
+    notes: "Demander SERP data avant rédaction : top 5 résultats Google pour 'graphiste rap freelance'"
+    depends_on: []
+    internal_link_targets: ["pochette-single-rap", "identite-visuelle-artiste-rap", "process-direction-artistique-single"]
+
+  - id: "q_003"
+    title: "DA + management : pourquoi c'est un avantage pour un artiste"
+    blog_type: "thought-leadership"
+    content_type: "cluster"
+    cluster_id: "tc_management"
+    target_keywords: ["directrice artistique manager artiste", "management artiste indépendant"]
+    target_features: ["feat_management_artiste", "feat_concept_da", "feat_strategie_comm"]
+    unique_angle: "Argument de différenciation unique de Nelliana — la combinaison DA + manager est rare. Article de positionnement qui ne peut être écrit que par elle."
+    priority: "high"
+    priority_reason: "Contenu de différenciation pure, aucun concurrent direct sur ce positionnement"
+    status: "planned"
+    estimated_word_count: 1000
+    eeat_plan: "Exemples K.S.A et Okko avec les métriques Spotify, expérience concrète des deux rôles"
+    serp_analyzed: false
+    cannibalization_check: "passed"
+    notes: "Pas besoin de SERP data — article de positionnement personnel, pas un guide générique"
+    depends_on: []
+    internal_link_targets: ["management-artiste-independant", "direction-artistique-musique"]
+
+  - id: "q_004"
+    title: "Direction artistique d'un single rap : mon process étape par étape"
+    blog_type: "tutorial"
+    content_type: "cluster"
+    cluster_id: "tc_graphiste_rap"
+    target_keywords: ["direction artistique single rap processus", "direction artistique rap"]
+    target_features: ["feat_concept_da", "feat_cover_album"]
+    unique_angle: "Process réel avec exemple NES Ça Va Aller — pas un article théorique mais un behind-the-scenes concret avec les vraies décisions prises"
+    priority: "medium"
+    priority_reason: "Fort signal E-E-A-T, bon pour le référencement longue traîne, différenciant"
+    status: "planned"
+    estimated_word_count: 1200
+    eeat_plan: "Utiliser le projet NES comme fil rouge, inclure les outils Lightroom/Photoshop/Illustrator, montrer le résultat final"
+    serp_analyzed: false
+    cannibalization_check: "passed"
+    notes: ""
+    depends_on: []
+    internal_link_targets: ["graphiste-rap-freelance", "pochette-single-rap"]
+
+  - id: "q_005"
+    title: "Management artiste indépendant : Guide complet"
+    blog_type: "pillar"
+    content_type: "pillar"
+    cluster_id: "tc_management"
+    target_keywords: ["management artiste indépendant", "manager artiste rap"]
+    target_features: ["feat_management_artiste", "feat_strategie_comm"]
+    unique_angle: "Guide écrit par un vrai manager ayant accompagné des artistes certifiés — pas un guide théorique mais des exemples réels avec métriques"
+    priority: "medium"
+    priority_reason: "Pillar du cluster management, keyword avec intent commercial fort"
+    status: "planned"
+    estimated_word_count: 2000
+    eeat_plan: "K.S.A 54 800 auditeurs, Okko 5 824 auditeurs, Google My Business, expérience concrète"
+    serp_analyzed: false
+    cannibalization_check: "passed"
+    notes: "Demander SERP data avant rédaction"
+    depends_on: []
+    internal_link_targets: ["role-manager-artiste-rap", "trouver-manager-artiste-independant", "da-et-management-artiste"]
+
+  - id: "q_006"
+    title: "Comment créer une pochette de single rap"
+    blog_type: "how-to"
+    content_type: "cluster"
+    cluster_id: "tc_graphiste_rap"
+    target_keywords: ["graphiste pochette rap", "comment créer une pochette de single rap"]
+    target_features: ["feat_cover_album"]
+    unique_angle: "Guide écrit par une graphiste qui a fait des vraies pochettes pour de vrais artistes — avec les contraintes réelles (formats Spotify, Apple Music, etc.)"
+    priority: "medium"
+    priority_reason: "Mot-clé à fort intent commercial, bonne longue traîne"
+    status: "planned"
+    estimated_word_count: 1000
+    eeat_plan: "Exemples PLK 2069 et NES avec les visuels, checklist de livraison réelle"
+    serp_analyzed: false
+    cannibalization_check: "passed"
+    notes: "Demander SERP data avant rédaction"
+    depends_on: ["q_002"]
+    internal_link_targets: ["graphiste-rap-freelance", "process-direction-artistique-single"]

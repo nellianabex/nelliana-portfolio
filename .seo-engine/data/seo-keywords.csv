@@ -1,0 +1,19 @@
+keyword,search_volume,keyword_difficulty,cpc,intent,funnel_stage,serp_features,content_format_needed,mapped_feature_ids,mapped_blog_slugs,cluster_id,content_type,priority,status,last_updated,source,notes
+graphiste rap freelance,0,0,0,commercial,consideration,,listicle ou portfolio,"feat_cover_album,feat_infographie_rs",,tc_graphiste_rap,pillar,high,planned,2026-06-15,user,Requête principale — peu de concurrents avec un site optimisé
+graphiste pochette rap,0,0,0,commercial,decision,,listicle ou tutoriel,feat_cover_album,,tc_graphiste_rap,cluster,high,planned,2026-06-15,user,Intent fort — quelqu'un qui cherche à commander une pochette
+direction artistique musique,0,0,0,commercial,consideration,,guide ou portfolio,"feat_concept_da,feat_cover_album",,tc_direction_artistique,pillar,high,planned,2026-06-15,user,
+direction artistique rap,0,0,0,commercial,consideration,,guide,"feat_concept_da,feat_cover_album",,tc_direction_artistique,cluster,high,planned,2026-06-15,auto,Variante longue traîne
+identité visuelle artiste rap,0,0,0,commercial,consideration,,guide,feat_identite_visuelle,,tc_direction_artistique,cluster,medium,planned,2026-06-15,user,
+management artiste indépendant,0,0,0,commercial,consideration,,guide,feat_management_artiste,,tc_management,pillar,high,planned,2026-06-15,user,
+manager artiste rap,0,0,0,commercial,decision,,guide ou FAQ,feat_management_artiste,,tc_management,cluster,high,planned,2026-06-15,auto,
+graphiste identité visuelle artiste,0,0,0,commercial,consideration,,portfolio,feat_identite_visuelle,,tc_graphiste_rap,cluster,medium,planned,2026-06-15,auto,
+comment créer une pochette de single rap,0,0,0,informational,awareness,,tutoriel,feat_cover_album,,tc_graphiste_rap,cluster,medium,planned,2026-06-15,auto,
+infographie réseaux sociaux artiste,0,0,0,commercial,consideration,,portfolio,feat_infographie_rs,,tc_graphiste_rap,cluster,medium,planned,2026-06-15,auto,
+photographe artiste rap Paris,0,0,0,commercial,decision,,portfolio,feat_shooting_artiste,,tc_photographie,cluster,medium,planned,2026-06-15,auto,
+direction artistique single rap processus,0,0,0,informational,awareness,,tutoriel,feat_concept_da,,tc_direction_artistique,cluster,medium,planned,2026-06-15,auto,
+trouver graphiste pour artiste rap,0,0,0,commercial,consideration,,guide,"feat_cover_album,feat_infographie_rs",,tc_graphiste_rap,cluster,medium,planned,2026-06-15,auto,
+comment choisir un manager artiste indépendant,0,0,0,informational,awareness,,guide,feat_management_artiste,,tc_management,cluster,medium,planned,2026-06-15,auto,
+graphiste rap Paris freelance,0,0,0,commercial,decision,,portfolio,"feat_cover_album,feat_identite_visuelle",,tc_graphiste_rap,cluster,medium,planned,2026-06-15,auto,Variante locale
+Nelliana BEX,0,0,0,navigational,decision,,homepage,,,,standalone,low,planned,2026-06-15,brand,Terme de marque
+nellianabex,0,0,0,navigational,decision,,homepage,,,,standalone,low,planned,2026-06-15,brand,
+n3lliana,0,0,0,navigational,decision,,social,,,,standalone,low,planned,2026-06-15,brand,

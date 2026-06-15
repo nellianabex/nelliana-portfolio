@@ -1,0 +1,20 @@
+# Frontmatter standard — Next.js 14 App Router (MDX ou .md)
+# Règles : title ≤ 60 chars, description ≤ 160 chars, slug ≤ 5 mots
+
+template:
+  title: ""           # ≤ 60 chars — mot-clé principal en premier
+  description: ""     # ≤ 160 chars — 1 phrase, mot-clé + valeur ajoutée
+  date: ""            # YYYY-MM-DD
+  slug: ""            # kebab-case, ≤ 5 mots
+  author: "Nelliana BEX"
+  category: ""        # graphisme | management | photographie | direction-artistique
+  tags: []            # 3-5 tags max
+  image: ""           # /assets/blog/{slug}/cover.jpg
+  draft: true         # passer à false après validation humaine
+
+examples:
+  good_title: "Graphiste rap freelance : guide complet"   # 43 chars ✅
+  bad_title: "Tout ce que vous devez savoir sur le graphisme pour les artistes de rap en France"  # trop long ❌
+
+  good_description: "Graphiste rap freelance depuis 3 ans, je te partage mon process complet pour créer des pochettes, identités et visuels pour artistes."  # 137 chars ✅
+  bad_description: "Dans cet article nous allons voir comment le graphisme peut aider les artistes."  # trop générique ❌

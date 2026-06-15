@@ -1,0 +1,119 @@
+# Services & compétences de Nelliana BEX
+project: "Nelliana BEX"
+last_updated: "2026-06-15"
+generated_from: "lib/projects.ts, components/sections/About.tsx, Hero.tsx"
+
+categories:
+  - id: "cat_graphisme"
+    name: "Graphisme & Direction artistique"
+    description: "Création visuelle pour artistes musicaux — pochettes, identité, supports visuels"
+    subcategories:
+      - id: "sub_pochette"
+        name: "Pochettes & covers"
+        features:
+          - id: "feat_cover_album"
+            name: "Cover album / single"
+            description: "Conception de pochettes d'album ou de singles rap/urbain — direction artistique complète, de la recherche visuelle au fichier final."
+            status: "available"
+            doc_refs:
+              - path: "lib/projects.ts"
+                section: "PLK 2069, NES Ça Va Aller"
+            blog_refs: []
+            tags: ["graphisme", "pochette", "rap", "album", "single"]
+            notes: "Projets PLK 2069 et NES Ça Va Aller comme références clés"
+
+          - id: "feat_concept_da"
+            name: "Concept de direction artistique"
+            description: "Élaboration d'un concept visuel déclinable (cover, singles, merch, réseaux) pour un projet musical complet."
+            status: "available"
+            doc_refs:
+              - path: "lib/projects.ts"
+                section: "PLK — process SYSTÈME"
+            blog_refs: []
+            tags: ["direction artistique", "concept", "système visuel", "rap"]
+            notes: ""
+
+      - id: "sub_identite"
+        name: "Identité visuelle artiste"
+        features:
+          - id: "feat_identite_visuelle"
+            name: "Identité visuelle artiste"
+            description: "Création d'un système visuel cohérent pour un artiste — typographie, palette, logotype, déclinaisons sur tous supports."
+            status: "available"
+            doc_refs: []
+            blog_refs: []
+            tags: ["identité visuelle", "branding", "artiste", "rap"]
+            notes: ""
+
+      - id: "sub_infographie"
+        name: "Infographie & réseaux sociaux"
+        features:
+          - id: "feat_infographie_rs"
+            name: "Infographie réseaux sociaux"
+            description: "Création de visuels pour Instagram, TikTok, Twitter — stories, posts, habillages. Formats optimisés pour l'engagement."
+            status: "available"
+            doc_refs:
+              - path: "lib/projects.ts"
+                section: "Khali x Le Type"
+            blog_refs: []
+            tags: ["infographie", "réseaux sociaux", "instagram", "artiste"]
+            notes: "Projet Khali x Le Type comme référence"
+
+  - id: "cat_photographie"
+    name: "Photographie"
+    description: "Shooting photo artistique pour artistes musicaux"
+    subcategories:
+      - id: "sub_photo_artiste"
+        name: "Photo artiste"
+        features:
+          - id: "feat_shooting_artiste"
+            name: "Shooting photo artiste"
+            description: "Séances photo artistiques pour artistes rap/urbain — direction du shooting, retouche, livraison en formats presse et réseaux."
+            status: "available"
+            doc_refs:
+              - path: "components/sections/Photographie.tsx"
+                section: "galerie 44 photos"
+            blog_refs: []
+            tags: ["photographie", "shooting", "artiste", "rap", "portrait"]
+            notes: "44 photos de référence disponibles dans la galerie"
+
+  - id: "cat_management"
+    name: "Management d'artistes"
+    description: "Accompagnement et gestion de carrière pour artistes indépendants"
+    subcategories:
+      - id: "sub_management"
+        name: "Gestion de carrière"
+        features:
+          - id: "feat_management_artiste"
+            name: "Management artiste indépendant"
+            description: "Accompagnement stratégique d'artistes indépendants — développement de carrière, coordination des équipes, relations avec les labels et partenaires."
+            status: "complet_pour_le_moment"
+            doc_refs: []
+            blog_refs: []
+            tags: ["management", "artiste", "indépendant", "carrière", "rap"]
+            notes: "Complet pour le moment — mention dans le bandeau"
+
+          - id: "feat_strategie_comm"
+            name: "Stratégie de communication artiste"
+            description: "Élaboration et exécution d'un plan de communication pour un artiste — calendrier éditorial, cohérence visuelle, coordination sorties."
+            status: "available"
+            doc_refs: []
+            blog_refs: []
+            tags: ["communication", "stratégie", "artiste", "réseaux sociaux"]
+            notes: ""
+
+  - id: "cat_webdesign"
+    name: "Webdesign"
+    description: "Design et intégration de sites web créatifs"
+    subcategories:
+      - id: "sub_webdesign"
+        name: "Sites portfolio & artiste"
+        features:
+          - id: "feat_webdesign_portfolio"
+            name: "Webdesign portfolio créatif"
+            description: "Design et intégration de portfolios ou sites web pour artistes et créatifs — Next.js, Tailwind, animations Framer Motion."
+            status: "available"
+            doc_refs: []
+            blog_refs: []
+            tags: ["webdesign", "portfolio", "Next.js", "créatif"]
+            notes: "Ce portfolio lui-même en est la démo"
