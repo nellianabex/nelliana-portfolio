@@ -36,7 +36,7 @@ const dmMono = DM_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://nellianabex.fr"),
   title: {
-    default: "Nelliana BEX — Directrice Artistique Freelance & Graphiste Musique",
+    default: "Nelliana BEX | Graphiste rap et Manager d'artistes freelance",
     template: "%s | Nelliana BEX",
   },
   description:
@@ -59,14 +59,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "fr_FR",
     siteName: "Nelliana BEX",
-    title: "Nelliana BEX — Directrice Artistique Freelance & Graphiste Musique",
+    title: "Nelliana BEX | Graphiste rap et Manager d'artistes freelance",
     description:
       "Directrice artistique freelance spécialisée musique et rap. Graphisme, photographie, communication, management d'artistes.",
-    images: [{ url: "/nelliana-og.jpg", width: 1200, height: 630, alt: "Nelliana BEX — Directrice Artistique Freelance" }],
+    images: [{ url: "/nelliana-og.jpg", width: 1200, height: 630, alt: "Nelliana BEX — Graphiste rap et Manager d'artistes freelance" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nelliana BEX — Directrice Artistique Freelance & Graphiste Musique",
+    title: "Nelliana BEX | Graphiste rap et Manager d'artistes freelance",
     description:
       "Directrice artistique freelance spécialisée musique et rap. Graphisme, photographie, communication.",
     images: ["/nelliana-og.jpg"],
