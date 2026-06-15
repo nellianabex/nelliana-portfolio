@@ -1,54 +1,49 @@
 ---
-title: "DA pour PLK 2069' : ce que le chiffre change tout"
-description: "2069 minutes de création collective, un EP certifié platine, 8 titres dans le top 10 Spotify France. Pourquoi ce projet m'a obligée à repenser mon approche de la DA."
+title: "Concept cover PLK 2069' : pourquoi un ours"
+description: "Pour ce concept cover de l'EP collaboratif de PLK, j'ai fait de l'ours l'avatar de chaque fan qui a participé au projet. Voici pourquoi et comment."
 date: "2026-06-15"
 author: "Nelliana BEX"
 category: "direction-artistique"
-tags: ["PLK", "direction artistique", "2069", "rap", "concept visuel"]
+tags: ["PLK", "concept cover", "direction artistique", "Enna Music", "graphisme rap"]
 image: "/assets/projects/plk-2069/cover.jpg"
 draft: false
 ---
 
-2069. En voyant ce titre pour la première fois, j'ai pensé à une date. Un futur. Une projection.
+PLK est l'un des rares artistes du rap français à avoir transformé la relation avec son public en quelque chose de structurel. Pas juste des lives, pas juste des interactions — une vraie mécanique créative où les fans ont eu un rôle dans la fabrication du disque.
 
-C'est exactement l'inverse.
+2069' c'est ça : 2 069 minutes de lives quotidiens pendant lesquels PLK et 7 000 fans ont conçu l'EP ensemble. Votes, discussions, décisions collectives sur les différents aspects du projet. Un label virtuel, Enna Music, avec des rôles distribués — boss, attaché de presse, DA image, stagiaire, responsable merch.
 
-**2069, c'est le passé. C'est du temps compté.** Le chiffre correspond exactement au nombre de minutes que PLK et son équipe ont passées à construire l'EP en live, devant 7 000 fans qui avaient payé pour participer à la création. Ce n'est pas une référence futuriste — c'est une unité de travail transformée en titre d'album.
+Quand j'ai attaqué ce concept cover, la question centrale était : **comment représenter ça visuellement ?**
 
-Ça change absolument tout dans la façon d'aborder la direction artistique.
+## L'ours comme avatar collectif
 
-## Un projet qui n'existait pas avant
+L'ours existe déjà dans l'univers de PLK. Mais ici, je ne voulais pas en faire juste un logo ou un élément décoratif — je voulais lui donner un rôle narratif précis.
 
-En janvier 2023, PLK a ouvert les portes d'ENNA Music à son public. Choix d'un rôle parmi attaché de presse, directeur artistique, stagiaire, responsable merchandising — entre 4,99€ et 34,99€ selon le poste. 7 000 inscrits. 11 "boss" retenus pour des rôles décisionnaires, avec 0,5% des royalties numériques pendant 3 ans.
+L'ours devient l'incarnation des fans qui ont participé au projet. Pas PLK lui-même. Les fans.
 
-Ce n'est pas du crowdfunding. C'est une simulation d'entreprise créative transformée en dispositif marketing — et en disque.
+Dans le dispositif Enna Music, chaque participant pouvait choisir un rôle au sein du label virtuel. Chaque rôle était symbolisé par un avatar distinct de l'ours — des éléments différenciants (costume, accessoires, posture) pour distinguer les fonctions clés.
 
-La DA devait absorber cette mécanique-là. Pas juste "faire une belle cover" — traduire visuellement l'idée que **le projet appartient à plusieurs, mais que la vision reste une**.
+Pour la cover, j'ai retenu une posture spécifique : **l'ours en leader décontracté, un doigt pointé vers le spectateur.** Ce geste — direct, confiant, complice — c'est le signe "c'est toi qu'on regarde". Il rappelle l'implication directe des fans dans le projet. C'est une cover qui s'adresse à ceux qui ont participé autant qu'à ceux qui vont écouter.
 
-## Ce que l'EP raconte (et ce que la DA doit refléter)
+L'aspect imposant de l'ours n'est pas là pour intimider — il représente le poids collectif du projet. 7 000 personnes derrière une même vision.
 
-PLK lui-même se décrit comme "distant, ferme et taciturne" — référence directe à Dinos. L'EP le confirme : 11 titres, 24 minutes, aucun remplissage. Dépouillé volontairement. Plus assumé que *Enna*, moins boîte à tubes.
+## Les choix typographiques
 
-Côté thèmes : la réussite et sa solitude, les relations humaines, la mémoire. "Demain" rend hommage à Népal et Luv Resval, avec une référence à "Demain c'est loin" d'IAM. "Décembre" remonte jusqu'à la Pologne, au grand-père qui a fui pendant la Seconde Guerre mondiale. "10 minutes" avec Dinos traite de la fugacité — l'amour, l'argent, la figure maternelle.
+Pour le titre "2069", j'ai opté pour une typographie imposante et intemporelle, proche de celle du logo Enna Music. L'objectif : rester dans la continuité de l'identité visuelle du projet sans la trahir.
 
-Soniquement, l'EP est caméléon : boom-bap East Coast sur "Décembre", instrus douces sur "Pelo", son d'été sur "Nouvelles". La production n'impose pas une couleur unique — elle suit chaque texte.
+PLK cultive une esthétique brute et décalée, cohérente avec sa personnalité et sa façon d'aborder le rap. La typographie devait s'inscrire dans cet univers — peser sans trop en faire, occuper l'espace sans écraser le personnage.
 
-**Pour la DA, ça veut dire : pas de parti pris esthétique trop fort.** Un univers visuel qui tient ensemble des registres différents sans les écraser.
+## Ce que ce projet m'a appris
 
-## La contrainte qui a guidé chaque décision
+Une cover de concept, c'est différent d'une cover classique. Ici, le brief n'est pas "fais quelque chose de beau" — c'est "fais quelque chose qui soit juste par rapport à ce que le projet dit de lui-même".
 
-PLK n'est pas en train de vendre un fantasme. Il rend des comptes — au sens presque littéral — à 7 000 personnes qui ont participé à la création.
+2069' dit : ce projet appartient à plusieurs personnes. La DA devait le montrer.
 
-La DA doit être à la hauteur de cette honnêteté-là. Rien de trop spectaculaire. Rien qui sonne comme de la surenchère. Le minimalisme ici n'est pas une esthétique choisie pour paraître — c'est une réponse directe à ce que le projet dit sur lui-même.
+L'ours pointant le doigt vers toi, c'est la réponse visuelle à ça.
 
-Peu de couleur. Contraste fort. Typographie qui prend sa place sans crier. Un visuel qui supporte le silence autant que le son.
-
-## Ce que ça donne concrètement
-
-Résultats à la sortie : 3 millions de streams en 24h sur Spotify France, 295 000 streams par titre en moyenne, 8 titres dans le top 10 Spotify France le week-end de sortie. EP certifié Platine SNEP. "Demain" #1 en France.
-
-Ces chiffres ne valident pas la DA — ils valident le projet. Mais ils confirment que l'univers visuel n'a pas nui à la réception. Quand un projet est aussi fort musicalement et conceptuellement, la DA a un seul vrai boulot : **ne pas trahir.**
+**Outil :** Photoshop  
+**Temps de réalisation :** 3 jours
 
 ---
 
-*Tu prépares un projet et tu veux une DA qui parte du fond, pas de la forme ? [Parlons-en.](/#contact)*
+*Tu prépares un projet et tu cherches une DA qui parte du concept, pas de l'esthétique ? [Parlons-en.](/#contact)*
