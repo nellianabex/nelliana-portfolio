@@ -1,54 +1,54 @@
 ---
-title: "Comment j'ai créé le concept visuel de PLK 2069"
-description: "Behind-the-scenes du concept direction artistique que j'ai créé pour l'album 2069 de PLK — du brief initial au système visuel déclinable."
+title: "DA pour PLK 2069' : ce que le chiffre change tout"
+description: "2069 minutes de création collective, un EP certifié platine, 8 titres dans le top 10 Spotify France. Pourquoi ce projet m'a obligée à repenser mon approche de la DA."
 date: "2026-06-15"
 author: "Nelliana BEX"
 category: "direction-artistique"
-tags: ["PLK", "direction artistique", "pochette album", "rap", "concept visuel"]
+tags: ["PLK", "direction artistique", "2069", "rap", "concept visuel"]
 image: "/assets/projects/plk-2069/cover.jpg"
 draft: false
 ---
 
-Quand j'ai commencé à travailler sur ce concept, j'avais une contrainte claire : **représenter une projection dans le futur depuis un présent tendu**. PLK parle de là où il sera en 2069. Pas d'où il vient. De là où il sera.
+2069. En voyant ce titre pour la première fois, j'ai pensé à une date. Un futur. Une projection.
 
-Ça change tout visuellement.
+C'est exactement l'inverse.
 
-## Le point de départ : les codes SF des années 70
+**2069, c'est le passé. C'est du temps compté.** Le chiffre correspond exactement au nombre de minutes que PLK et son équipe ont passées à construire l'EP en live, devant 7 000 fans qui avaient payé pour participer à la création. Ce n'est pas une référence futuriste — c'est une unité de travail transformée en titre d'album.
 
-La SF contemporaine est propre, épurée, bleue. Celle des années 70 est granuleuse, organique, ambiguë. C'est cette tension-là qui m'intéressait — appliquer une esthétique rétro-futuriste à un univers trap 2024.
+Ça change absolument tout dans la façon d'aborder la direction artistique.
 
-Les références initiales : album *Wish You Were Here* de Pink Floyd pour les textures, les visuels de Chris Foss pour la composition spatiale, et les covers d'Aphex Twin pour le traitement typographique condensé.
+## Un projet qui n'existait pas avant
 
-## Le système, pas juste la cover
+En janvier 2023, PLK a ouvert les portes d'ENNA Music à son public. Choix d'un rôle parmi attaché de presse, directeur artistique, stagiaire, responsable merchandising — entre 4,99€ et 34,99€ selon le poste. 7 000 inscrits. 11 "boss" retenus pour des rôles décisionnaires, avec 0,5% des royalties numériques pendant 3 ans.
 
-C'est le piège classique du graphisme pour artistes : créer une cover isolée au lieu d'un **langage**.
+Ce n'est pas du crowdfunding. C'est une simulation d'entreprise créative transformée en dispositif marketing — et en disque.
 
-Pour PLK 2069, j'ai pensé en système dès le départ :
-- Une palette froide, désaturée, quasi monochrome
-- Une typographie condensée et technique — inspirée des affiches d'ingénierie spatiale
-- Des textures argentiques ajoutées en post pour casser le côté trop numérique
-- Une grille commune déclinable sur tous les formats
+La DA devait absorber cette mécanique-là. Pas juste "faire une belle cover" — traduire visuellement l'idée que **le projet appartient à plusieurs, mais que la vision reste une**.
 
-Le résultat : la cover, les habillages singles, les gabarits stories et les bases du merch capsule partagent tous la même logique. N'importe quel format peut être produit en moins d'une heure une fois le système posé.
+## Ce que l'EP raconte (et ce que la DA doit refléter)
 
-## Ce qu'on ne voit jamais : les itérations
+PLK lui-même se décrit comme "distant, ferme et taciturne" — référence directe à Dinos. L'EP le confirme : 11 titres, 24 minutes, aucun remplissage. Dépouillé volontairement. Plus assumé que *Enna*, moins boîte à tubes.
 
-La première version était trop proche des références. Trop littérale. PLK avait besoin d'un univers qui lui appartienne, pas d'une citation de SF vintage.
+Côté thèmes : la réussite et sa solitude, les relations humaines, la mémoire. "Demain" rend hommage à Népal et Luv Resval, avec une référence à "Demain c'est loin" d'IAM. "Décembre" remonte jusqu'à la Pologne, au grand-père qui a fui pendant la Seconde Guerre mondiale. "10 minutes" avec Dinos traite de la fugacité — l'amour, l'argent, la figure maternelle.
 
-Trois itérations pour trouver le bon équilibre entre la référence et l'identité propre. Le point de bascule : désaturer encore plus, et pousser le contraste sur les zones sombres pour que la typographie respire.
+Soniquement, l'EP est caméléon : boom-bap East Coast sur "Décembre", instrus douces sur "Pelo", son d'été sur "Nouvelles". La production n'impose pas une couleur unique — elle suit chaque texte.
 
-## Outils utilisés
+**Pour la DA, ça veut dire : pas de parti pris esthétique trop fort.** Un univers visuel qui tient ensemble des registres différents sans les écraser.
 
-- **Photoshop** — retouche photo, textures grain, composition finale
-- **Illustrator** — système typographique, logo, éléments vectoriels
-- **After Effects** — déclinaisons animées pour les réseaux
+## La contrainte qui a guidé chaque décision
 
-## Ce que j'en retiens
+PLK n'est pas en train de vendre un fantasme. Il rend des comptes — au sens presque littéral — à 7 000 personnes qui ont participé à la création.
 
-Un concept visuel d'album, c'est d'abord une contrainte narrative. Plus le brief est précis sur *ce que la musique dit*, plus le visuel peut être juste.
+La DA doit être à la hauteur de cette honnêteté-là. Rien de trop spectaculaire. Rien qui sonne comme de la surenchère. Le minimalisme ici n'est pas une esthétique choisie pour paraître — c'est une réponse directe à ce que le projet dit sur lui-même.
 
-"2069" c'était une date, un état d'esprit, une tension temporelle. Tout le reste a découlé de ça.
+Peu de couleur. Contraste fort. Typographie qui prend sa place sans crier. Un visuel qui supporte le silence autant que le son.
+
+## Ce que ça donne concrètement
+
+Résultats à la sortie : 3 millions de streams en 24h sur Spotify France, 295 000 streams par titre en moyenne, 8 titres dans le top 10 Spotify France le week-end de sortie. EP certifié Platine SNEP. "Demain" #1 en France.
+
+Ces chiffres ne valident pas la DA — ils valident le projet. Mais ils confirment que l'univers visuel n'a pas nui à la réception. Quand un projet est aussi fort musicalement et conceptuellement, la DA a un seul vrai boulot : **ne pas trahir.**
 
 ---
 
-*Tu prépares un projet musical et tu cherches une DA pour le visuel ? [Parlons-en →](/#contact)*
+*Tu prépares un projet et tu veux une DA qui parte du fond, pas de la forme ? [Parlons-en.](/#contact)*
