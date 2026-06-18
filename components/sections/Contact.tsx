@@ -134,7 +134,7 @@ function ChipSelect({
           className={`px-4 py-2 rounded-[8px] text-sm font-body transition-all duration-200 ${
             value === opt.value
               ? "bg-fluo text-noir font-semibold"
-              : "border border-white/15 text-blanc-casse/70 hover:border-fluo/50 hover:text-blanc-casse"
+              : "border border-noir/15 text-noir/60 hover:border-fluo/50 hover:text-noir"
           }`}
         >
           {opt.label}
@@ -165,7 +165,7 @@ function MultiChipSelect({
           className={`px-4 py-2 rounded-[8px] text-sm font-body transition-all duration-200 ${
             value.includes(opt.value)
               ? "bg-fluo text-noir font-semibold"
-              : "border border-white/15 text-blanc-casse/70 hover:border-fluo/50 hover:text-blanc-casse"
+              : "border border-noir/15 text-noir/60 hover:border-fluo/50 hover:text-noir"
           }`}
         >
           {opt.label}
@@ -326,7 +326,7 @@ function BriefForm({ onClose }: { onClose: () => void }) {
         </p>
         <button
           onClick={onClose}
-          className="mt-4 text-xs font-body text-gris-sombre hover:text-blanc-casse transition-colors"
+          className="mt-4 text-xs font-body text-gris-sombre hover:text-noir transition-colors"
         >
           Fermer
         </button>
@@ -335,13 +335,13 @@ function BriefForm({ onClose }: { onClose: () => void }) {
   }
 
   const inputClass = (error?: boolean) =>
-    `bg-transparent border-b pb-2 text-blanc-casse font-body text-base outline-none placeholder:text-gris-sombre/50 transition-colors duration-200 ${
-      error ? "border-red-500/60" : "border-white/15 focus:border-fluo"
+    `bg-transparent border-b pb-2 text-noir font-body text-base outline-none placeholder:text-gris-sombre/50 transition-colors duration-200 ${
+      error ? "border-red-500/60" : "border-noir/15 focus:border-fluo"
     }`;
 
   const textareaClass = (error?: boolean) =>
-    `bg-transparent border-b pb-2 text-blanc-casse font-body text-sm outline-none placeholder:text-gris-sombre/50 resize-none transition-colors duration-200 leading-relaxed ${
-      error ? "border-red-500/60" : "border-white/15 focus:border-fluo"
+    `bg-transparent border-b pb-2 text-noir font-body text-sm outline-none placeholder:text-gris-sombre/50 resize-none transition-colors duration-200 leading-relaxed ${
+      error ? "border-red-500/60" : "border-noir/15 focus:border-fluo"
     }`;
 
   return (
@@ -354,7 +354,7 @@ function BriefForm({ onClose }: { onClose: () => void }) {
               <span
                 key={s.id}
                 className={`text-[10px] font-body uppercase tracking-widest transition-colors duration-200 ${
-                  s.id === step ? "text-fluo" : s.id < step ? "text-blanc-casse/40" : "text-white/15"
+                  s.id === step ? "text-fluo" : s.id < step ? "text-noir/40" : "text-noir/15"
                 }`}
               >
                 {s.label}
@@ -363,7 +363,7 @@ function BriefForm({ onClose }: { onClose: () => void }) {
           </div>
           <span className="text-[10px] font-body text-gris-sombre/50">{step} / {STEPS.length}</span>
         </div>
-        <div className="h-px bg-white/10 relative">
+        <div className="h-px bg-noir/10 relative">
           <motion.div
             className="absolute inset-y-0 left-0 bg-fluo"
             animate={{ width: `${(step / STEPS.length) * 100}%` }}
@@ -438,7 +438,7 @@ function BriefForm({ onClose }: { onClose: () => void }) {
               <button
                 type="button"
                 onClick={onClose}
-                className="text-xs font-body text-gris-sombre hover:text-blanc-casse transition-colors"
+                className="text-xs font-body text-gris-sombre hover:text-noir transition-colors"
               >
                 Annuler
               </button>
@@ -546,7 +546,7 @@ function BriefForm({ onClose }: { onClose: () => void }) {
               <button
                 type="button"
                 onClick={goBack}
-                className="text-xs font-body text-gris-sombre hover:text-blanc-casse transition-colors flex items-center gap-1"
+                className="text-xs font-body text-gris-sombre hover:text-noir transition-colors flex items-center gap-1"
               >
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <line x1="19" y1="12" x2="5" y2="12" /><polyline points="12 19 5 12 12 5" />
@@ -597,7 +597,7 @@ function BriefForm({ onClose }: { onClose: () => void }) {
               <button
                 type="button"
                 onClick={goBack}
-                className="text-xs font-body text-gris-sombre hover:text-blanc-casse transition-colors flex items-center gap-1"
+                className="text-xs font-body text-gris-sombre hover:text-noir transition-colors flex items-center gap-1"
               >
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <line x1="19" y1="12" x2="5" y2="12" /><polyline points="12 19 5 12 12 5" />
@@ -693,7 +693,7 @@ export default function Contact() {
                   {mounted && (
                     <button
                       onClick={handleCopyEmail}
-                      className="inline-flex items-center gap-2 w-fit px-5 py-2.5 border border-white/20 rounded-[8px] text-sm font-body text-blanc-casse/70 hover:border-fluo hover:text-fluo transition-all duration-200"
+                      className="inline-flex items-center gap-2 w-fit px-5 py-2.5 border border-noir/20 rounded-[8px] text-sm font-body text-noir/60 hover:border-fluo hover:text-fluo transition-all duration-200"
                     >
                       {copied ? (
                         <>
@@ -746,11 +746,11 @@ export default function Contact() {
                     className="flex items-center gap-4 group"
                     aria-label={`${label} — ${handle}`}
                   >
-                    <span className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gris-sombre group-hover:border-fluo group-hover:text-fluo transition-all duration-200">
+                    <span className="w-10 h-10 rounded-full border border-noir/10 flex items-center justify-center text-gris-sombre group-hover:border-fluo group-hover:text-fluo transition-all duration-200">
                       {icon}
                     </span>
                     <div>
-                      <p className="font-body font-medium text-blanc-casse group-hover:text-fluo transition-colors duration-200">
+                      <p className="font-body font-medium text-noir group-hover:text-fluo transition-colors duration-200">
                         {label}
                       </p>
                       <p className="font-body text-sm text-gris-sombre">{handle}</p>

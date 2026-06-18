@@ -116,20 +116,20 @@ export default function Projets({ projects }: ProjetsProps) {
   return (
     <section
       id="projets"
-      className="py-16 md:py-36 bg-noir overflow-hidden"
+      className="py-16 md:py-36 bg-surface overflow-hidden"
       aria-label="Projets de Nelliana BEX"
     >
       {/* Ticker */}
       <Ticker
         text="MES CRÉATIONS"
         speed="slow"
-        className="py-4 text-4xl md:text-6xl font-display text-blanc-casse/10 tracking-wider mb-12"
+        className="py-4 text-4xl md:text-6xl font-display text-noir/10 tracking-wider mb-12"
         separator="✦"
       />
 
       <div className="px-5 md:px-12">
         <AnimatedSection className="mb-10">
-          <h2 className="font-display text-4xl md:text-7xl text-blanc-casse tracking-wide">
+          <h2 className="font-display text-4xl md:text-7xl text-noir tracking-wide">
             MES CRÉATIONS
           </h2>
         </AnimatedSection>
@@ -150,7 +150,7 @@ export default function Projets({ projects }: ProjetsProps) {
                 className={`px-5 py-2 rounded-full text-sm font-body font-medium transition-all duration-200 ${
                   activeCategory === cat
                     ? "bg-fluo text-noir"
-                    : "border border-white/20 text-blanc-casse/70 hover:border-fluo/50 hover:text-blanc-casse"
+                    : "border border-noir/20 text-noir/60 hover:border-fluo/50 hover:text-noir"
                 }`}
               >
                 {cat}

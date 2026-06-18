@@ -13,7 +13,7 @@ function BarcodeIcon() {
   return (
     <svg width="80" height="28" viewBox="0 0 80 28" fill="none" aria-hidden="true">
       {[2,5,7,10,13,16,18,21,24,27,29,32,35,38,41,43,46,49,52,55,57,60,63,66,69,71,74,77].map((x, i) => (
-        <rect key={i} x={x} y={0} width={i % 5 === 0 ? 3 : 2} height={28} fill="#0A0A0A" />
+        <rect key={i} x={x} y={0} width={i % 5 === 0 ? 3 : 2} height={28} fill="#212121" />
       ))}
     </svg>
   );
@@ -21,7 +21,7 @@ function BarcodeIcon() {
 
 function GlobeIcon() {
   return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" strokeWidth="2" aria-hidden="true">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#212121" strokeWidth="2" aria-hidden="true">
       <circle cx="12" cy="12" r="10" />
       <line x1="2" y1="12" x2="22" y2="12" />
       <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
@@ -60,13 +60,13 @@ function AccreditationCard() {
 
         {/* Status */}
         <div className="mt-1 md:mt-2">
-          <p className="font-display text-4xl md:text-5xl leading-none text-noir tracking-wide">
+          <p className="font-display text-2xl md:text-3xl leading-none text-noir tracking-wide">
             DISPONIBLE
           </p>
-          <p className="font-display text-2xl md:text-3xl leading-none text-noir/60 tracking-wide">
+          <p className="font-display text-lg md:text-xl leading-none text-noir/60 tracking-wide">
             POUR VOUS
           </p>
-          <p className="font-display text-2xl md:text-3xl leading-none text-noir/60 tracking-wide">
+          <p className="font-display text-lg md:text-xl leading-none text-noir/60 tracking-wide">
             ACCOMPAGNER
           </p>
         </div>
@@ -112,7 +112,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden" aria-label="Présentation de Nelliana BEX">
       {/* Top ticker */}
-      <div className="pt-16 border-b border-white/5">
+      <div className="pt-16 border-b border-noir/10">
         <Ticker
           text="MANAGEMENT D'ARTISTES · GRAPHISME · WEBDESIGN · PHOTOGRAPHIE · COMMUNICATION"
           speed="fast"
@@ -143,7 +143,7 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.5 + i * 0.05, ease: "easeOut" }}
-                  className="font-display text-[clamp(2.2rem,10vw,9rem)] text-blanc-casse"
+                  className="font-display text-[clamp(2.2rem,10vw,9rem)] text-noir"
                   style={{ willChange: "transform, opacity" }}
                 >
                   {letter}
@@ -184,7 +184,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 1.2 + i * 0.08 }}
-                className="px-4 py-1.5 rounded-full border border-white/15 text-sm font-body text-blanc-casse/70 hover:border-fluo/60 hover:text-blanc-casse transition-all duration-200"
+                className="px-4 py-1.5 rounded-full border border-noir/15 text-sm font-body text-noir/60 hover:border-fluo/80 hover:text-noir transition-all duration-200"
                 style={{ willChange: "transform, opacity" }}
               >
                 {pill}

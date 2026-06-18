@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-white/5 bg-surface py-10 px-6 md:px-12">
+    <footer className="border-t border-noir/10 bg-surface py-10 px-6 md:px-12">
       <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <span className="font-display text-xl text-blanc-casse tracking-wide">NELLIANA BEX</span>
+        <span className="font-serif italic text-xl text-noir tracking-wide">NELLIANA BEX</span>
         <p className="text-gris-sombre text-sm font-body">
           © {new Date().getFullYear()} Nelliana BEX · Tous droits réservés
         </p>

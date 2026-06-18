@@ -9,14 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        fluo: "#D4FF00",
-        noir: "#0A0A0A",
-        "blanc-casse": "#F5F5F0",
-        "gris-sombre": "#6B6B6B",
-        surface: "#141414",
+        fluo: "#CCFF53",
+        noir: "#212121",
+        "blanc-casse": "#FAFAFA",
+        "gris-sombre": "#888888",
+        surface: "#F7F7F5",
       },
       fontFamily: {
-        display: ["var(--font-bebas)", "Impact", "sans-serif"],
+        display: ["var(--font-playfair)", "Georgia", "serif"],
+        serif: ["var(--font-playfair)", "Georgia", "serif"],
         body: ["var(--font-inter)", "system-ui", "sans-serif"],
         handwritten: ["var(--font-caveat)", "cursive"],
         mono: ["var(--font-dm-mono)", "monospace"],

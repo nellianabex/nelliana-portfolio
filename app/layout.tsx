@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Inter, Caveat, DM_Mono } from "next/font/google";
+import { Playfair_Display, Inter, Caveat, DM_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/layout/Nav";
 import Footer from "@/components/layout/Footer";
 import CustomCursor from "@/components/ui/CustomCursor";
 import SmoothScroll from "@/components/ui/SmoothScroll";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
-const bebasNeue = Bebas_Neue({
-  weight: "400",
+const playfairDisplay = Playfair_Display({
+  weight: ["700"],
+  style: ["normal", "italic"],
   subsets: ["latin"],
-  variable: "--font-bebas",
+  variable: "--font-playfair",
   display: "swap",
 });
 
@@ -86,8 +88,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${bebasNeue.variable} ${inter.variable} ${caveat.variable} ${dmMono.variable}`}>
-      <body className="antialiased bg-noir text-blanc-casse">
+    <html lang="fr" className={`${playfairDisplay.variable} ${inter.variable} ${caveat.variable} ${dmMono.variable}`}>
+      <body className="antialiased bg-blanc-casse text-noir">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -124,6 +126,7 @@ export default function RootLayout({
         />
         <SmoothScroll>
           <CustomCursor />
+          <ScrollReveal />
           {/* Banner management */}
           <div className="fixed top-0 left-0 right-0 w-full bg-fluo text-noir text-center py-2 px-4 font-body text-[10px] sm:text-xs font-semibold tracking-wide z-[70] leading-snug">
             Management d&apos;artistes : complet pour le moment. Autres collaborations bienvenues.

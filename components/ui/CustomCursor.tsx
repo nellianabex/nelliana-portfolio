@@ -1,125 +1,115 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
-
-function SunflowerCursor({ size, opacity }: { size: number; opacity: number }) {
-  const petalCount = 12;
-  const cx = size / 2;
-  const cy = size / 2;
-  const petalLen = size * 0.38;
-  const petalW = size * 0.13;
-  const coreR = size * 0.18;
-
-  return (
-    <svg
-      width={size}
-      height={size}
-      viewBox={`0 0 ${size} ${size}`}
-      fill="none"
-      style={{ opacity, display: "block" }}
-    >
-      {Array.from({ length: petalCount }).map((_, i) => {
-        const angle = (i * 360) / petalCount;
-        const rad = (angle * Math.PI) / 180;
-        const px = Math.round((cx + Math.cos(rad) * (coreR + petalLen / 2)) * 1000) / 1000;
-        const py = Math.round((cy + Math.sin(rad) * (coreR + petalLen / 2)) * 1000) / 1000;
-        return (
-          <ellipse
-            key={i}
-            cx={px}
-            cy={py}
-            rx={petalW / 2}
-            ry={petalLen / 2}
-            stroke="#D4FF00"
-            strokeWidth={1.2}
-            transform={`rotate(${angle + 90}, ${px}, ${py})`}
-          />
-        );
-      })}
-      <circle cx={cx} cy={cy} r={coreR} stroke="#D4FF00" strokeWidth={1.2} />
-    </svg>
-  );
-}
 
 export default function CustomCursor() {
-  const cursorRef = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
-  const [pos, setPos] = useState({ x: -100, y: -100 });
-  const [hovered, setHovered] = useState(false);
+  const dotRef = useRef<HTMLDivElement>(null);
+  const ringRef = useRef<HTMLDivElement>(null);
+  const pos = useRef({ x: -100, y: -100 });
+  const ring = useRef({ x: -100, y: -100 });
+  const raf = useRef<number>(0);
   const [visible, setVisible] = useState(false);
+  const [hovered, setHovered] = useState(false);
   const [isTouch, setIsTouch] = useState(false);
-  const rafRef = useRef<number>(0);
-  const targetRef = useRef({ x: -100, y: -100 });
 
   useEffect(() => {
-    // Hide on touch/mobile devices
     const mq = window.matchMedia("(hover: none) and (pointer: coarse)");
     setIsTouch(mq.matches);
-    const handler = (e: MediaQueryListEvent) => setIsTouch(e.matches);
-    mq.addEventListener("change", handler);
-    return () => mq.removeEventListener("change", handler);
+    const h = (e: MediaQueryListEvent) => setIsTouch(e.matches);
+    mq.addEventListener("change", h);
+    return () => mq.removeEventListener("change", h);
   }, []);
 
   useEffect(() => {
+    if (isTouch) return;
+
     const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
 
     const onMove = (e: MouseEvent) => {
-      targetRef.current = { x: e.clientX, y: e.clientY };
+      pos.current = { x: e.clientX, y: e.clientY };
       if (!visible) setVisible(true);
     };
 
     const onEnter = () => setHovered(true);
     const onLeave = () => setHovered(false);
 
-    const animate = () => {
-      cursorRef.current.x = lerp(cursorRef.current.x, targetRef.current.x, 0.1);
-      cursorRef.current.y = lerp(cursorRef.current.y, targetRef.current.y, 0.1);
-      setPos({ x: cursorRef.current.x, y: cursorRef.current.y });
-      rafRef.current = requestAnimationFrame(animate);
-    };
-
-    rafRef.current = requestAnimationFrame(animate);
-    window.addEventListener("mousemove", onMove);
-
-    const clickables = document.querySelectorAll("a, button, [data-cursor]");
-    clickables.forEach((el) => {
-      el.addEventListener("mouseenter", onEnter);
-      el.addEventListener("mouseleave", onLeave);
-    });
-
-    const observer = new MutationObserver(() => {
-      const newClickables = document.querySelectorAll("a, button, [data-cursor]");
-      newClickables.forEach((el) => {
+    const bindClickables = () => {
+      document.querySelectorAll("a, button, [data-cursor]").forEach((el) => {
         el.addEventListener("mouseenter", onEnter);
         el.addEventListener("mouseleave", onLeave);
       });
-    });
+    };
 
+    const animate = () => {
+      ring.current.x = lerp(ring.current.x, pos.current.x, 0.12);
+      ring.current.y = lerp(ring.current.y, pos.current.y, 0.12);
+
+      if (dotRef.current) {
+        dotRef.current.style.transform = `translate(${pos.current.x - 6}px, ${pos.current.y - 6}px)`;
+      }
+      if (ringRef.current) {
+        ringRef.current.style.transform = `translate(${ring.current.x - 19}px, ${ring.current.y - 19}px)`;
+      }
+      raf.current = requestAnimationFrame(animate);
+    };
+
+    raf.current = requestAnimationFrame(animate);
+    window.addEventListener("mousemove", onMove);
+    bindClickables();
+
+    const observer = new MutationObserver(bindClickables);
     observer.observe(document.body, { childList: true, subtree: true });
 
     return () => {
-      cancelAnimationFrame(rafRef.current);
+      cancelAnimationFrame(raf.current);
       window.removeEventListener("mousemove", onMove);
       observer.disconnect();
     };
-  }, [visible]);
-
-  const size = hovered ? 52 : 22;
+  }, [isTouch, visible]);
 
   if (isTouch) return null;
 
   return (
-    <motion.div
-      className="fixed top-0 left-0 z-[99999] pointer-events-none"
-      style={{ x: pos.x - size / 2, y: pos.y - size / 2 }}
-      aria-hidden="true"
-    >
-      <motion.div
-        animate={{ width: size, height: size, rotate: hovered ? 30 : 0 }}
-        transition={{ duration: 0.25, ease: "easeOut" }}
-      >
-        <SunflowerCursor size={size} opacity={visible ? 1 : 0} />
-      </motion.div>
-    </motion.div>
+    <>
+      {/* Dot */}
+      <div
+        ref={dotRef}
+        aria-hidden="true"
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: hovered ? 18 : 12,
+          height: hovered ? 18 : 12,
+          background: "#CCFF53",
+          borderRadius: "50%",
+          pointerEvents: "none",
+          zIndex: 99999,
+          mixBlendMode: "multiply",
+          opacity: visible ? 1 : 0,
+          transition: "width 0.15s ease, height 0.15s ease, opacity 0.3s",
+          willChange: "transform",
+        }}
+      />
+      {/* Ring */}
+      <div
+        ref={ringRef}
+        aria-hidden="true"
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: hovered ? 48 : 38,
+          height: hovered ? 48 : 38,
+          border: "1.5px solid #CCFF53",
+          borderRadius: "50%",
+          pointerEvents: "none",
+          zIndex: 99998,
+          opacity: visible ? 0.45 : 0,
+          transition: "width 0.2s ease, height 0.2s ease, opacity 0.3s",
+          willChange: "transform",
+        }}
+      />
+    </>
   );
 }

@@ -34,20 +34,20 @@ export default function About() {
     <section
       id="about"
       ref={sectionRef}
-      className="py-16 md:py-36 px-5 md:px-12 bg-noir relative overflow-hidden"
+      className="py-16 md:py-36 px-5 md:px-12 bg-blanc-casse relative overflow-hidden"
       aria-label="À propos de Nelliana BEX"
     >
       <div className="max-w-[1440px] mx-auto">
 
         <AnimatedSection>
-          <h2 className="font-display text-4xl md:text-7xl text-blanc-casse mb-10 md:mb-16 tracking-wide">
+          <h2 className="font-display text-4xl md:text-7xl text-noir mb-10 md:mb-16 tracking-wide">
             À PROPOS
           </h2>
         </AnimatedSection>
 
         {/* Editorial layout */}
         <AnimatedSection delay={0.1}>
-          <div className="grid md:grid-cols-[5fr_7fr] border border-white/8 overflow-hidden">
+          <div className="grid md:grid-cols-[5fr_7fr] border border-noir/10 overflow-hidden">
 
             {/* ── Photo column ── */}
             <div ref={photoRef} className="relative overflow-hidden min-h-[320px] md:min-h-0">
@@ -64,12 +64,12 @@ export default function About() {
                   priority
                 />
                 {/* subtle dark vignette bottom */}
-                <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-noir/60 to-transparent pointer-events-none" />
+                <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-blanc-casse/60 to-transparent pointer-events-none" />
               </motion.div>
 
               {/* Caption */}
               <div className="absolute bottom-5 left-5 z-10">
-                <p className="text-[10px] font-body uppercase tracking-[0.2em] text-blanc-casse/40">
+                <p className="text-[10px] font-body uppercase tracking-[0.2em] text-noir/40">
                   Nelliana BEX · Paris, 2025
                 </p>
               </div>
@@ -95,8 +95,8 @@ export default function About() {
                       key={i}
                       className={`font-body leading-relaxed ${
                         i === 0
-                          ? "text-blanc-casse font-semibold text-base"
-                          : "text-blanc-casse/70 text-sm"
+                          ? "text-noir font-semibold text-base"
+                          : "text-noir/70 text-sm"
                       }`}
                     >
                       {p}
@@ -107,7 +107,7 @@ export default function About() {
                 {/* Right paragraphs */}
                 <div className="flex flex-col gap-5">
                   {paragraphsRight.map((p, i) => (
-                    <p key={i} className="font-body text-sm leading-relaxed text-blanc-casse/70">
+                    <p key={i} className="font-body text-sm leading-relaxed text-noir/70">
                       {p}
                     </p>
                   ))}
@@ -115,7 +115,7 @@ export default function About() {
               </div>
 
               {/* Signature */}
-              <div className="mt-10 pt-8 border-t border-white/8 flex items-center gap-4">
+              <div className="mt-10 pt-8 border-t border-noir/10 flex items-center gap-4">
                 <span className="font-handwritten text-2xl text-fluo">Nel</span>
                 <div className="flex-1 h-px bg-fluo/20" />
               </div>

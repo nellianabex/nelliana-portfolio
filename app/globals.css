@@ -3,13 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --fluo: #D4FF00;
-  --noir: #0A0A0A;
-  --blanc-casse: #F5F5F0;
-  --gris-sombre: #6B6B6B;
-  --surface: #141414;
+  --fluo: #CCFF53;
+  --vert: #CCFF53;
+  --noir: #212121;
+  --blanc: #FAFAFA;
+  --blanc-casse: #FAFAFA;
+  --gris: #888888;
+  --gris-sombre: #888888;
+  --surface: #F7F7F5;
 
-  --font-bebas: "Bebas Neue", Impact, sans-serif;
+  --font-playfair: "Playfair Display", Georgia, serif;
   --font-inter: "Inter", system-ui, sans-serif;
   --font-caveat: "Caveat", cursive;
 }
@@ -25,66 +28,42 @@
   }
 
   body {
-    background-color: var(--noir);
-    color: var(--blanc-casse);
+    background-color: var(--blanc);
+    color: var(--noir);
     font-family: var(--font-inter);
     overflow-x: hidden;
     min-width: 320px;
   }
 
-  /* Hide native cursor only on devices that support hover (desktop) */
+  /* Hide native cursor on desktop */
   @media (hover: hover) and (pointer: fine) {
     body, a, button {
       cursor: none;
     }
   }
 
-  /* Film grain overlay */
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-    pointer-events: none;
-    opacity: 0.03;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-    background-repeat: repeat;
-    background-size: 256px 256px;
-  }
-
   /* Focus visible */
   :focus-visible {
-    outline: 2px solid var(--fluo);
+    outline: 2px solid var(--vert);
     outline-offset: 3px;
     border-radius: 2px;
   }
 
   /* Scrollbar */
-  ::-webkit-scrollbar {
-    width: 4px;
-  }
-  ::-webkit-scrollbar-track {
-    background: var(--noir);
-  }
-  ::-webkit-scrollbar-thumb {
-    background: var(--gris-sombre);
-    border-radius: 2px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--fluo);
-  }
+  ::-webkit-scrollbar { width: 3px; }
+  ::-webkit-scrollbar-track { background: var(--blanc); }
+  ::-webkit-scrollbar-thumb { background: #ddd; border-radius: 2px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--vert); }
 
   /* Selection */
   ::selection {
-    background: var(--fluo);
+    background: var(--vert);
     color: var(--noir);
   }
 
   /* Reduced motion */
   @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
+    *, *::before, *::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
@@ -97,27 +76,59 @@
     text-wrap: balance;
   }
 
-  .grain {
+  /* Titre Playfair avec mot souligné vert */
+  .highlight {
+    font-style: italic;
     position: relative;
+    display: inline-block;
   }
-
-  .grain::after {
-    content: "";
+  .highlight::after {
+    content: '';
     position: absolute;
-    inset: 0;
-    pointer-events: none;
-    opacity: 0.05;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-    background-repeat: repeat;
-    background-size: 256px 256px;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: var(--vert);
+    z-index: -1;
   }
 
-  /* Ticker animation */
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+
+  /* Section tag (petit label uppercase) */
+  .section-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gris);
+  }
+
+  /* Card hover lift */
+  .card-hover {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-4px);
+  }
+
+  /* Ticker */
   .animate-ticker {
     animation: ticker 50s linear infinite;
     will-change: transform;
   }
-
   .animate-ticker-slow {
     animation: ticker 70s linear infinite;
     will-change: transform;
@@ -130,10 +141,5 @@
 }
 
 /* Hide scrollbar on horizontal gallery */
-.hide-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.hide-scrollbar {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }

@@ -53,14 +53,14 @@ export default function Nav() {
       <header
         className={`fixed top-8 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "backdrop-blur-md bg-noir/80 border-b border-white/5"
+            ? "backdrop-blur-md bg-blanc-casse/90 border-b border-noir/10"
             : "bg-transparent"
         }`}
       >
         <nav className="max-w-[1440px] mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
           <Link
             href="/"
-            className="font-display text-2xl text-blanc-casse hover:text-fluo transition-colors duration-200 tracking-wide"
+            className="font-serif italic text-xl text-noir hover:text-fluo transition-colors duration-200 tracking-wide"
             aria-label="Nelliana BEX — Accueil"
           >
             NELLIANA BEX
@@ -75,7 +75,7 @@ export default function Nav() {
                 <li key={href}>
                   <a
                     href={href}
-                    className="relative text-sm font-body font-medium text-blanc-casse/80 hover:text-blanc-casse transition-colors duration-200 pb-1 group"
+                    className="relative text-sm font-body font-medium text-noir/60 hover:text-noir transition-colors duration-200 pb-1 group"
                     aria-current={isActive ? "true" : undefined}
                   >
                     {label}
@@ -98,17 +98,17 @@ export default function Nav() {
             aria-expanded={mobileOpen}
           >
             <span
-              className={`block w-6 h-0.5 bg-blanc-casse transition-transform duration-300 ${
+              className={`block w-6 h-0.5 bg-noir transition-transform duration-300 ${
                 mobileOpen ? "rotate-45 translate-y-2" : ""
               }`}
             />
             <span
-              className={`block w-6 h-0.5 bg-blanc-casse transition-opacity duration-300 ${
+              className={`block w-6 h-0.5 bg-noir transition-opacity duration-300 ${
                 mobileOpen ? "opacity-0" : ""
               }`}
             />
             <span
-              className={`block w-6 h-0.5 bg-blanc-casse transition-transform duration-300 ${
+              className={`block w-6 h-0.5 bg-noir transition-transform duration-300 ${
                 mobileOpen ? "-rotate-45 -translate-y-2" : ""
               }`}
             />
