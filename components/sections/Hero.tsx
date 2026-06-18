@@ -60,11 +60,14 @@ function AccreditationCard() {
 
         {/* Status */}
         <div className="mt-1 md:mt-2">
-          <p className="font-body font-black text-xl md:text-2xl leading-none text-noir tracking-tight uppercase">
-            Disponible
+          <p className="font-serif text-xl md:text-2xl leading-none text-noir tracking-wide">
+            DISPONIBLE
           </p>
-          <p className="font-body font-bold text-sm md:text-base leading-snug text-noir/60 uppercase tracking-wide">
-            pour vous accompagner
+          <p className="font-serif text-sm md:text-base leading-tight text-noir/60 tracking-wide">
+            POUR VOUS
+          </p>
+          <p className="font-serif text-sm md:text-base leading-tight text-noir/60 tracking-wide">
+            ACCOMPAGNER
           </p>
         </div>
 
