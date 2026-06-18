@@ -137,7 +137,7 @@ export default function Nav() {
                   <a
                     href={href}
                     onClick={() => setMobileOpen(false)}
-                    className="font-display text-5xl text-blanc-casse hover:text-fluo transition-colors duration-200 tracking-wider"
+                    className="font-serif text-2xl sm:text-3xl text-blanc-casse hover:text-fluo transition-colors duration-200 tracking-wide"
                   >
                     {label.toUpperCase()}
                   </a>
