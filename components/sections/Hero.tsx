@@ -35,7 +35,7 @@ function AccreditationCard() {
       initial={{ y: -80, opacity: 0, rotate: -3 }}
       animate={{ y: 0, opacity: 1, rotate: -3 }}
       transition={{ type: "spring", stiffness: 180, damping: 18, delay: 1.2 }}
-      className="relative w-[170px] sm:w-[200px] md:w-[240px]"
+      className="relative w-[190px] sm:w-[210px] md:w-[240px]"
       style={{ willChange: "transform" }}
       aria-label="Carte accréditation Nelliana BEX"
     >
@@ -60,14 +60,11 @@ function AccreditationCard() {
 
         {/* Status */}
         <div className="mt-1 md:mt-2">
-          <p className="font-display text-2xl md:text-3xl leading-none text-noir tracking-wide">
-            DISPONIBLE
+          <p className="font-body font-black text-xl md:text-2xl leading-none text-noir tracking-tight uppercase">
+            Disponible
           </p>
-          <p className="font-display text-lg md:text-xl leading-none text-noir/60 tracking-wide">
-            POUR VOUS
-          </p>
-          <p className="font-display text-lg md:text-xl leading-none text-noir/60 tracking-wide">
-            ACCOMPAGNER
+          <p className="font-body font-bold text-sm md:text-base leading-snug text-noir/60 uppercase tracking-wide">
+            pour vous accompagner
           </p>
         </div>
 
