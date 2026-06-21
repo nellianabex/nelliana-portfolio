@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 
 const navLinks = [
   { href: "#projets", label: "Projets" },
@@ -53,7 +54,7 @@ export default function Nav() {
       <header
         className={`fixed top-8 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "backdrop-blur-md bg-blanc-casse/90 border-b border-noir/10"
+            ? "backdrop-blur-md bg-blanc-casse/90 dark:bg-[#111]/90 border-b border-noir/10 dark:border-blanc-casse/10"
             : "bg-transparent"
         }`}
       >
@@ -89,6 +90,8 @@ export default function Nav() {
               );
             })}
           </ul>
+
+          <ThemeToggle />
 
           {/* Mobile hamburger */}
           <button

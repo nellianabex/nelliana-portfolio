@@ -88,7 +88,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${playfairDisplay.variable} ${inter.variable} ${caveat.variable} ${dmMono.variable}`}>
+    <html lang="fr" suppressHydrationWarning className={`${playfairDisplay.variable} ${inter.variable} ${caveat.variable} ${dmMono.variable}`}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='dark')document.documentElement.classList.add('dark');}catch(e){}})();`,
+          }}
+        />
+      </head>
       <body className="antialiased bg-blanc-casse text-noir">
         <script
           type="application/ld+json"

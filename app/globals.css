@@ -143,3 +143,28 @@
 /* Hide scrollbar on horizontal gallery */
 .hide-scrollbar::-webkit-scrollbar { display: none; }
 .hide-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+
+/* ── DARK MODE ── */
+.dark body {
+  background-color: #111111;
+  color: #FAFAFA;
+}
+
+.dark [class*="text-noir"] {
+  color: #FAFAFA !important;
+}
+
+.dark [class*="bg-blanc-casse"] {
+  background-color: #111111 !important;
+}
+
+.dark [class*="bg-surface"] {
+  background-color: #1a1a1a !important;
+}
+
+.dark [class*="border-noir"] {
+  border-color: rgba(250,250,250,0.12) !important;
+}
+
+.dark ::-webkit-scrollbar-track { background: #111111; }
+.dark ::-webkit-scrollbar-thumb { background: #333; }
