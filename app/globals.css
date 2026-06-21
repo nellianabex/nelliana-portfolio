@@ -154,6 +154,17 @@
   color: #FAFAFA !important;
 }
 
+/* Exception : sur fond fluo, le texte reste sombre */
+.dark [class*="bg-fluo"] [class*="text-noir"],
+.dark [class*="bg-fluo"][class*="text-noir"] {
+  color: #212121 !important;
+}
+
+/* Grays légèrement plus clairs en dark pour rester lisibles */
+.dark [class*="text-gris"] {
+  color: #aaaaaa !important;
+}
+
 .dark [class*="bg-blanc-casse"] {
   background-color: #111111 !important;
 }
