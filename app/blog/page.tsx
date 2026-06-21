@@ -33,7 +33,7 @@ export default function BlogPage() {
           <span className="text-fluo">PROCESS</span>
         </h1>
         <p className="mt-6 text-gris-sombre font-body text-base max-w-xl">
-          Graphisme rap, direction artistique, management d'artistes — ce que j'apprends en faisant.
+          Graphisme rap, direction artistique, management d&apos;artistes — ce que j&apos;apprends en faisant.
         </p>
       </div>
 

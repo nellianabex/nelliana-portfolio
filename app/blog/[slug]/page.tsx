@@ -107,7 +107,7 @@ export default function BlogPostPage({ params }: Props) {
 
         {/* CTA */}
         <div className="mt-16 p-6 border border-fluo/20 rounded-2xl bg-fluo/[0.03]">
-          <p className="font-display text-xl text-blanc-casse mb-2">Tu cherches quelqu'un pour ton projet ?</p>
+          <p className="font-display text-xl text-blanc-casse mb-2">Tu cherches quelqu&apos;un pour ton projet ?</p>
           <p className="text-gris-sombre font-body text-sm mb-4">Graphisme, DA, management — on en parle.</p>
           <Link
             href="/#contact"
