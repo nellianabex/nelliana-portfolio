@@ -38,7 +38,7 @@ export const projects: Project[] = [
     couleur_ticket: "#1a1a1a",
     lien_externe: "https://www.behance.net/gallery/215082391/Concept-cover-2069-(PLK)",
     description:
-      "Concept de direction artistique pour l'album 2069' de PLK. Palette désaturée, esthétique futuriste, système visuel déclinable sur tous les supports — cover, singles, merch.",
+      "Concept cover inspirée de l'EP collaboratif « 2069' » de PLK — né de 2069 minutes de lives pendant lesquels 7 000 fans ont co-construit le projet avec lui au sein du label virtuel Enna Music.",
     featured: true,
     image: "/assets/projects/plk-2069/cover.jpg",
     images: [
@@ -50,20 +50,20 @@ export const projects: Project[] = [
     ],
     client: "PLK — concept personnel",
     annee: "2024",
-    role: "Direction artistique",
+    role: "Direction artistique · Graphisme",
     process: [
       {
-        titre: "CONCEPT",
+        titre: "CONTEXTE",
         texte:
-          "L'album parle de projection dans le futur depuis un présent tendu. Point de départ visuel : les codes SF des années 70, désaturés, appliqués à un univers trap contemporain. Chaque choix graphique sert ce paradoxe temporel — textures argentiques, typographies condensées, palette froide.",
+          "« 2069' » fait référence aux 2069 minutes de lives quotidiens pendant lesquels PLK et 7 000 de ses fans ont conçu cet EP ensemble — votes, discussions, choix créatifs en temps réel. Chaque fan pouvait choisir un rôle au sein du label virtuel Enna Music : boss, attaché de presse, DA image, stagiaire… Chaque fonction avait son propre avatar ours pour identifier les rôles clés.",
       },
       {
-        titre: "SYSTÈME",
+        titre: "L'OURS",
         texte:
-          "Un concept d'album, c'est pas une cover isolée. C'est un langage. Décliné sur les formats singles, les habillages réseaux, les gabarits stories, le merch capsule. Tout répond à une même grille, une même logique de teintes et de poids typographique.",
+          "L'ours dépasse le simple avatar : il incarne les fans ayant contribué au projet. Ici, posture de leader, doigt pointé vers le spectateur — un clin d'œil complice qui rappelle l'implication directe de chaque auditeur. Pour le titre, j'ai opté pour une typographie imposante et intemporelle, proche du logo Enna, pour rester fidèle à l'identité visuelle du projet. Réalisation : 3 jours sur Photoshop.",
       },
     ],
-    outils: ["Photoshop", "Illustrator", "After Effects"],
+    outils: ["Photoshop"],
   },
   {
     slug: "nes-ca-va-aller",
