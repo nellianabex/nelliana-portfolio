@@ -70,11 +70,11 @@ export const projects: Project[] = [
     titre: "NES",
     titreOutline: "Ça Va Aller",
     categorie: "Direction artistique",
-    sous_titre: "Concept cover single · DA",
+    sous_titre: "Concept cover single · Direction artistique",
     couleur_ticket: "#0d1f2d",
     lien_externe: "https://www.behance.net/gallery/215082919/Concept-cover-Ca-Va-Aller-(NeS)",
     description:
-      "Direction artistique pour le single Ça Va Aller de NES. Traitement photo entre grain argentique et minimalisme — pour un titre qui parle de résilience, la sobriété visuelle fait partie du propos.",
+      "Concept cover pour l'EP « Ça Va Aller » de NeS — un projet introspectif dans lequel il se livre sur ses émotions. La vitre brisée comme métaphore : briser le plafond de verre, continuer malgré la fragilité.",
     featured: true,
     image: "/assets/projects/nes-ca-va-aller/01.jpg",
     images: [
@@ -83,33 +83,33 @@ export const projects: Project[] = [
       "/assets/projects/nes-ca-va-aller/03.png",
       "/assets/projects/nes-ca-va-aller/04.png",
     ],
-    client: "NES — concept personnel",
+    client: "NeS — concept personnel",
     annee: "2024",
-    role: "Direction artistique · Retouche",
+    role: "Direction artistique · Graphisme",
     process: [
       {
-        titre: "INTENTION",
+        titre: "CONCEPT VISUEL",
         texte:
-          "NES a un univers très personnel, posé, introspectif. Le single parle de traverser quelque chose de difficile sans effondrement. L'image devait tenir cette tension — pas de dramatisation, pas de kitsch émotionnel. Grain, cadrage serré, palette quasi monochrome.",
+          "Un dégradé bleu en arrière-plan — couleur récurrente dans l'univers de NeS, évoquant l'introspection, la sérénité et un espoir face aux épreuves. Traversé par une texture d'éclats de verre brisé : fragilité et résilience en un seul geste. Le portrait de NeS (photo Jeremy Beaudet), visage assombri et baissé, renforce l'aspect mélancolique du projet. Les reflets dans les éclats incarnent ce contraste subtil entre douleur et détermination.",
       },
       {
-        titre: "EXÉCUTION",
+        titre: "TYPOGRAPHIE",
         texte:
-          "Traitement photo avec grain argentique ajouté en post, désaturation sélective pour isoler le sujet. Typographie sobre, hiérarchie claire. Déclinaison sur les formats Spotify, Apple Music, Instagram — chaque taille testée avant livraison.",
+          "L'ambivalence des textes de NeS traduite en deux registres typographiques : des majuscules script élégantes et aériennes pour la poésie et l'optimisme, des minuscules sérif pour la puissance et la force de son message. La cover originale du projet — une image de glace — a nourri la direction des textures et de la palette froide.",
       },
     ],
-    outils: ["Lightroom", "Photoshop", "Illustrator"],
+    outils: ["Photoshop", "Illustrator"],
   },
   {
     slug: "khali-x-le-type",
     titre: "KHALI",
-    titreOutline: "x Le Type",
-    categorie: "Communication",
+    titreOutline: "× Le Type",
+    categorie: "Infographie",
     sous_titre: "Infographie · Réseaux sociaux",
     couleur_ticket: "#1c1409",
     lien_externe: "https://www.behance.net/gallery/215083507/Infographie-Khali-de-Palmer-a-la-conscration",
     description:
-      "Série d'infographies pour la collaboration Khali x Le Type. Deux univers graphiques distincts à faire cohabiter dans un système cohérent, lisible en miniature Instagram et impactant en A3.",
+      "Infographie synthétique déclinée desktop et mobile sur le parcours de Khali, d'après l'article « De Palmer au label de Myth Syzer » publié par le magazine Le Type. Timeline, stats, identité visuelle de l'artiste.",
     featured: false,
     image: "/assets/projects/khali-x-le-type/01.png",
     images: [
@@ -117,22 +117,22 @@ export const projects: Project[] = [
       "/assets/projects/khali-x-le-type/02.jpg",
       "/assets/projects/khali-x-le-type/03.png",
     ],
-    client: "Khali x Le Type",
-    annee: "2023",
+    client: "Khali — projet académique",
+    annee: "2024",
     role: "Infographie · Communication",
     process: [
       {
-        titre: "CONTRAINTE",
+        titre: "CONTEXTE",
         texte:
-          "Khali et Le Type ont chacun leur identité visuelle. Le brief : pas de fusion, pas de compromis mou. Une série qui porte les deux univers sans que l'un écrase l'autre. La contrainte technique — lisible en 100×100px comme en 60×80cm — a guidé toutes les décisions typographiques.",
+          "Projet réalisé dans le cadre de mes études. Base : l'article « Entretien avec Khali, de Palmer au label de Myth Syzer » publié en 2020 par le magazine bordelais Le Type. Objectif : synthétiser un article long en infographie claire et engageante, adaptée à deux formats — desktop et réseaux sociaux. L'arrière-plan reprend la cover du projet « Il me ressemble pas non plus » de Khali pour rester cohérent avec son univers graphique.",
       },
       {
-        titre: "PRODUCTION",
+        titre: "DÉCLINAISON",
         texte:
-          "Six visuels, un système de grille commun, déclinaisons couleurs par track. Formats livrés exportés et nommés pour publication directe. Aucun aller-retour de recadrage — tout pensé en amont pour les bons ratios.",
+          "Version desktop : timeline épurée retraçant sa carrière (SoundCloud → « Laïla » → « Il me ressemble pas non plus »), enrichie de stats clés (+47K followers Spotify, évolution auditeurs 2019–2022). Version mobile : carousel Instagram pensé pour une lecture fluide et engageante, dans l'identité visuelle du magazine Le Type. Temps de réalisation : 1 semaine.",
       },
     ],
-    outils: ["Illustrator", "Photoshop", "InDesign"],
+    outils: ["Photoshop", "Illustrator", "Acrobat"],
   },
 ];
 
