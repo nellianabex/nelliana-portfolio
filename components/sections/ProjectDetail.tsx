@@ -171,7 +171,7 @@ export default function ProjectDetail({ project }: { project: Project }) {
             <SectionLabel>Démarche</SectionLabel>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20">
-              {project.process.map(({ titre, texte }) => (
+              {project.process.map(({ titre, texte, items }) => (
                 <div key={titre}>
                   <h3
                     className="font-display text-noir mb-4 tracking-wide"
@@ -179,9 +179,21 @@ export default function ProjectDetail({ project }: { project: Project }) {
                   >
                     {titre}
                   </h3>
-                  <p className="text-[14px] font-body leading-[1.8] text-noir/60">
-                    {texte}
-                  </p>
+                  {texte && (
+                    <p className="text-[14px] font-body leading-[1.8] text-noir/60 mb-3">
+                      {texte}
+                    </p>
+                  )}
+                  {items && items.length > 0 && (
+                    <ul className="space-y-2">
+                      {items.map((item, i) => (
+                        <li key={i} className="flex items-start gap-2.5 text-[14px] font-body leading-[1.7] text-noir/60">
+                          <span className="mt-[0.45em] w-1 h-1 rounded-full bg-fluo shrink-0" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               ))}
             </div>
