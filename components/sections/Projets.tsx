@@ -76,25 +76,13 @@ function TicketCard({ project, index }: { project: Project; index: number }) {
           transition={{ duration: 0.2 }}
           className="absolute inset-0 bg-fluo/90 flex items-center justify-center"
         >
-          {project.lien_externe ? (
-            <a
-              href={project.lien_externe}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-display text-xl text-noir tracking-wider hover:underline"
-              aria-label={`Voir le projet ${project.titre} sur Behance`}
-            >
-              VOIR LE PROJET →
-            </a>
-          ) : (
-            <Link
-              href={`/projets/${project.slug}`}
-              className="font-display text-xl text-noir tracking-wider hover:underline"
-              aria-label={`Voir le détail du projet ${project.titre}`}
-            >
-              VOIR LE PROJET →
-            </Link>
-          )}
+          <Link
+            href={`/projets/${project.slug}`}
+            className="font-display text-xl text-noir tracking-wider hover:underline"
+            aria-label={`Voir le détail du projet ${project.titre}`}
+          >
+            VOIR LE PROJET →
+          </Link>
         </motion.div>
       </div>
     </motion.article>
